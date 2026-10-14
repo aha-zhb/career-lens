@@ -1,0 +1,64 @@
+# Career Lens｜研究与判断依据
+
+{% if synthetic %}**合成演示：全部岗位和个人行为为虚构。**{% endif %}
+{{ report_content.scope_summary }}
+
+## 研究范围与停止理由
+
+招聘候选{{ market_model.candidate_jd_count }}条，纳入{{ market_model.eligible_jd_count }}条。工作实践资料另计，不计作JD。
+
+{{ market_model.sampling_method }}
+
+{% for r in market_model.research_rounds %}- {{ r.strategy }}：新增{{ r.new_source_ids|join('、') }}；结论{% if r.changed_conclusion %}发生变化{% else %}未改变{% endif %}；仍缺{{ r.remaining_gaps|join('；') or '无新增关键缺口' }}。
+{% endfor %}
+停止理由：{{ market_model.stop_reason }}
+
+范围：{{ market_model.sample_limitations|join('；') }}
+
+## 完整能力树与行为标尺
+
+{% for d in market_model.dimensions %}### {{ d.name }} · {{ level_text(d) }}
+
+任务：{{ d.role_tasks|join('；') }}。子能力：{{ d.subskills|default([])|join('；') }}。
+
+判级：{{ d.level_rationale }}{% if d.rating_review is defined %}；{{ d.rating_review.rationale }}{% endif %}
+
+来源：{% for sid in d.supporting_sources %}[{{ source_map[sid].organization }}]({{ source_map[sid].url or '#' }}){% if not loop.last %}、{% endif %}{% endfor %}
+
+{% for a in d.rubric %}- L{{ a.level }}：{{ a.behavior }}
+{% endfor %}
+{% for p in candidate_evidence.assessments if p.dimension_id == d.id %}个人：{{ level_text(p, 'score', 'score_range') }}；{{ p.rationale }}
+
+材料：{% for eid in p.evidence_ids %}{{ evidence_map[eid].source_excerpt_or_summary }}（{{ evidence_map[eid].source_material_id }}）{% if not loop.last %}；{% endif %}{% endfor %}
+
+补充方向：{{ p.missing_evidence|join('；') or '以本人决策与产出维持可审阅记录' }}
+{% endfor %}
+{% endfor %}
+{% if market_model.capability_tree is defined %}### 二级任务映射
+
+{% for t in market_model.capability_tree %}- {{ t.name }} → {{ dimension_map[t.parent_dimension_id].name }}：{{ t.tasks|join('；') }}。
+{% endfor %}{% endif %}
+## 项目阶段与本人责任
+
+{% for e in candidate_evidence.events|default([]) %}- {{ e.project }}：{{ stage_labels[e.stage] }}。责任：{{ e.responsibility }}；决策：{{ e.decision }}；结果：{{ e.outcome }}。材料{{ e.material_ids|join('、') }}。
+{% endfor %}
+## 原认识对照
+
+{% for b in beliefs %}- 原判断：{{ b.statement }}。本次对照：{{ b.explanation }}
+{% else %}未提供前置认识，仅介绍市场要求，不作个人认知盲区判断。
+{% endfor %}
+## 来源登记
+
+{% for s in sources %}### {{ s.id }} · {{ s.organization }} · {{ s.title }}
+
+层：{{ layer_labels[s.source_layer] }}；地区{{ s.location }}；经验标识{{ s.seniority }}。采集{{ s.collected_at }}；发布日期{{ s.published_at or '页面未标明' }}。
+
+[来源]({{ s.url or '#' }})：{{ s.description_summary }}
+
+{% if s.source_status_note %}{{ s.source_status_note }}{% endif %} 纳入判断：{{ s.exclusion_reason or '职责与本次任务标尺相关' }}。
+
+{% endfor %}
+{% if revision_history is defined %}## 修订记录
+
+{% for r in revision_history %}- {{ r.revised_at }}：{{ r.change_reason }}；原判断：{{ r.previous_assessment }}。
+{% endfor %}{% endif %}

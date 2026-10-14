@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://career-lens.local/schemas/candidate-evidence.schema.json",
+  "title": "Candidate material registry and evidence assessments",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "materials",
+    "evidence",
+    "assessments"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string"
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "provided_by_user"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "resume",
+              "project_description",
+              "answer",
+              "work_sample",
+              "interview_feedback",
+              "other"
+            ]
+          },
+          "provided_by_user": {
+            "const": true
+          },
+          "filename_redacted": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "capability_id",
+          "source_material_id",
+          "source_excerpt_or_summary",
+          "evidence_type",
+          "involvement",
+          "strength"
+        ],
+        "properties": {
+          "evidence_id": {
+            "type": "string"
+          },
+          "capability_id": {
+            "type": "string"
+          },
+          "source_material_id": {
+            "type": "string"
+          },
+          "source_excerpt_or_summary": {
+            "type": "string"
+          },
+          "evidence_type": {
+            "enum": [
+              "direct",
+              "indirect",
+              "self_report",
+              "unknown"
+            ]
+          },
+          "involvement": {
+            "enum": [
+              "lead",
+              "contributor",
+              "exposure",
+              "unknown"
+            ]
+          },
+          "outcome": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "strength": {
+            "enum": [
+              "strong",
+              "moderate",
+              "weak"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "dimension_id",
+          "status",
+          "score",
+          "rationale",
+          "evidence_ids",
+          "missing_evidence"
+        ],
+        "properties": {
+          "dimension_id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "verified",
+              "partial",
+              "unknown",
+              "confirmed_gap"
+            ]
+          },
+          "score": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "missing_evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "score_range": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            }
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "schema_version": {
+      "const": "0.2"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "project",
+          "material_ids",
+          "stage",
+          "responsibility",
+          "decision",
+          "outcome"
+        ],
+        "properties": {
+          "project": {
+            "type": "string",
+            "minLength": 1
+          },
+          "material_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "stage": {
+            "enum": [
+              "concept",
+              "prototype",
+              "trial",
+              "launched",
+              "operating",
+              "unknown"
+            ]
+          },
+          "responsibility": {
+            "type": "string",
+            "minLength": 1
+          },
+          "decision": {
+            "type": "string",
+            "minLength": 1
+          },
+          "outcome": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

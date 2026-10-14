@@ -1,0 +1,471 @@
+{
+  "knowledge": {
+    "id": "enterprise-ai-applications",
+    "version": "2026-10-11.v05.1"
+  },
+  "date": "2026-11-22（虚构后续阶段）",
+  "revision": 2,
+  "case_id": "fictional-a",
+  "kind": "synthetic",
+  "target": {
+    "label": "企业AI应用产品经理，负责正式交付与使用后迭代（虚构目标）",
+    "precision": "posting",
+    "applicability": "目标JD为虚构练习，岗位知识只解释相关责任，不代表真实在招机会。"
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "personal",
+      "title": "企业流程交付",
+      "text": "主导两个流程产品正式交付，负责需求与实施；有用户反馈迭代。",
+      "locator": "虚构材料A／简历第1段"
+    },
+    {
+      "id": "E2",
+      "kind": "personal",
+      "title": "AI实践阶段",
+      "text": "独立做过资料检索Demo与离线测试，尚未进入真实用户使用。",
+      "locator": "虚构材料A／项目说明"
+    },
+    {
+      "id": "T1",
+      "kind": "target",
+      "title": "目标JD",
+      "text": "要求亲自负责AI应用从验证到正式交付及使用后迭代，并能展示一次真实使用驱动的调整。",
+      "locator": "虚构目标A／职责及条件"
+    },
+    {
+      "id": "E3",
+      "kind": "personal",
+      "title": "新增正式交付记录",
+      "text": "虚构后续：六周内完成一个部门的正式AI资料工具交付，保留失败、本人调整与真实使用结果；尚无跨部门推广。",
+      "locator": "虚构材料A／后续正式交付记录"
+    }
+  ],
+  "judgments": [
+    {
+      "id": "J1",
+      "statement": "新增记录已经补上单部门AI交付与使用迭代经历；接下来应按具体岗位核对责任跨度。",
+      "scope": "承担企业AI应用方案、验证与使用改进的岗位",
+      "finding_kind": "mixed",
+      "responsibility_refs": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "evidence_refs": [
+        "E1",
+        "E2",
+        "E3",
+        "T1"
+      ],
+      "rationale": "新阶段记录支持正式交付与使用驱动调整，原先缺少该经历的判断必须修订。它仍不能证明跨客户复制或规模运营。",
+      "alternatives": [
+        "如果所谓正式交付仍是演示或短暂试用，应恢复原阶段判断。"
+      ],
+      "change_conditions": [
+        "具体目标需要跨部门规模运营时，另查该经历；记录显示仅试用时重新归类。"
+      ]
+    },
+    {
+      "id": "J2",
+      "statement": "也可以先选择认可企业产品经验、允许逐步积累AI专项经历的岗位。",
+      "scope": "承担企业AI应用方案、验证与使用改进的岗位",
+      "finding_kind": "strength",
+      "responsibility_refs": [
+        "D1",
+        "D5"
+      ],
+      "evidence_refs": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "rationale": "不同职责组合的门槛不同；企业交付资产适合用来筛选接受相关背景的岗位。太平洋电信参照说明AI专项经历存在优先项形式，不能据此保证某个职位一定适合。",
+      "alternatives": [
+        "若实际JD把正式AI交付设为硬要求，这条路径仍需先补对应经历。"
+      ],
+      "change_conditions": [
+        "具体JD出现新的硬条件时重新筛选。"
+      ]
+    }
+  ],
+  "presentation": {
+    "title": "新经历出现后，定位也应随之改变",
+    "main_judgment": "J1",
+    "intro": "这是虚构的新证据修订练习。新增材料改变了项目阶段，旧版不能继续要求补一个已经完成的任务。",
+    "role_intro": "这个目标同时要求方案、验证与使用后的改进。技术理解需要变成取舍，交付之后也要回答用户是否获得价值。",
+    "personal_intro": "原来的Demo经历仍保留；新记录补上正式交付和使用改进。下一步按目标范围比较，而非重复旧建议。",
+    "comparison": [
+      {
+        "responsibility_ref": "D1",
+        "experience": "主导企业流程交付。",
+        "difference": "业务与推进基础能够迁移，需要用具体任务说明。",
+        "judgment_ref": "J1"
+      },
+      {
+        "responsibility_ref": "D3",
+        "experience": "已做资料检索Demo和离线测试。",
+        "difference": "可以展示验证判断，不能直接推断不会评估。",
+        "judgment_ref": "J1"
+      },
+      {
+        "responsibility_ref": "D4",
+        "experience": "新增单部门正式交付与使用后改进记录。",
+        "difference": "原阶段缺口已改变，跨部门或规模运营仍需另看。",
+        "judgment_ref": "J1"
+      }
+    ],
+    "paths": [
+      {
+        "title": "按具体JD争取应用岗位",
+        "fit": "新经历已覆盖单部门交付与改进。",
+        "investment": "如实展示本人决定，核对行业和责任跨度。",
+        "tradeoff": "不能把单部门成果升级为跨客户规模运营。",
+        "choose_when": "具体JD的条件与已完成阶段相符。",
+        "judgment_refs": [
+          "J1"
+        ]
+      },
+      {
+        "title": "先找能发挥企业产品经验的岗位",
+        "fit": "按实际条件筛选AI经历为优先项、认可企业交付背景的职位。",
+        "investment": "整理本人需求取舍与交付结果，并核对每份JD的AI门槛。",
+        "tradeoff": "可能暂时减少对生产AI专项责任的承担；不能只按职位名投递。",
+        "choose_when": "当前更需要发挥既有经验，或暂时没有积累正式AI交付的条件。",
+        "judgment_refs": [
+          "J2"
+        ]
+      }
+    ],
+    "choice_note": "这两条路都成立。先确认想承担的责任，再决定是补一段经历，还是调整当前求职范围。",
+    "responsibility_refs": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "reader": {
+      "updated_at": "2026-10-12",
+      "snapshot": [
+        {
+          "label": "新增经历",
+          "text": "单部门正式AI交付及使用驱动改进。",
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "label": "判断变化",
+          "text": "原来的使用阶段缺口已有新证据。",
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "label": "继续核对",
+          "text": "跨部门、规模运营和具体行业条件。",
+          "judgment_refs": [
+            "J1",
+            "J2"
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "title": "关注单任务应用结果",
+          "requirement": "验证、交付与使用反馈共同支撑结果责任。",
+          "meaning": "新增记录已能说明这段阶段经历，不能重复旧的补经历建议。",
+          "check": "核对本人责任、正式交付与反馈调整是否符合该JD。",
+          "source_refs": [
+            "R015",
+            "R029"
+          ],
+          "evidence_refs": [],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "title": "额外承担跨客户复制",
+          "requirement": "部分产品化岗位要求共性能力与实施成本控制。",
+          "meaning": "单部门成果不能直接扩展为跨客户复制经验。",
+          "check": "看岗位是否要求第二场景、复制成本或持续运营跨度。",
+          "source_refs": [
+            "R021"
+          ],
+          "evidence_refs": [],
+          "judgment_refs": [
+            "J1",
+            "J2"
+          ]
+        }
+      ],
+      "insight": {
+        "title": "材料变化，建议也应变化",
+        "text": "这是虚构的后续阶段练习：新增正式交付和使用调整记录后，不能继续把候选人停留在Demo阶段。新的定位应认可已完成经历，同时按目标核对尚未证明的责任跨度。",
+        "judgment_refs": [
+          "J1"
+        ]
+      },
+      "findings": [
+        {
+          "status": "strength",
+          "title": "新增经历改变了阶段判断",
+          "fact": "新记录包含单部门正式交付、失败、本人调整与使用结果。",
+          "meaning": "已经补上原来缺少的这段经历。",
+          "next": "如实说明自己如何根据使用证据改变方案。",
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "status": "target",
+          "title": "责任跨度仍需按岗位核对",
+          "fact": "尚无跨部门推广或跨客户复制记录。",
+          "meaning": "若JD增加这类条件，需要另外比较。",
+          "next": "先读具体岗位责任，避免把单部门结果升级为规模运营。",
+          "judgment_refs": [
+            "J1",
+            "J2"
+          ]
+        }
+      ],
+      "path_steps": [
+        "用新记录展示本人交付与调整，逐份核对目标JD。",
+        "结合新增AI经历和企业基础，重新筛选责任接近的岗位。"
+      ],
+      "next_step": {
+        "title": "用新材料重新筛一次目标岗位",
+        "text": "本例没有真实招聘动作。演练时按新阶段核对具体JD，不再沿用“尚无真实使用”的旧判断。",
+        "judgment_refs": [
+          "J1",
+          "J2"
+        ]
+      },
+      "market_intro": "先看岗位实际要求，再看自己的经历对应哪一段。下面是招聘条件的差异，不是按职位名称分高低；同一个岗位也可能同时包含多种条件。"
+    },
+    "radar": {
+      "title": "岗位要求与你的经历对照",
+      "scope": "已核验企业AI应用职责的任务参照，含跨场景产品化扩展责任；是分析标尺，不是全国平均分或具体JD的统一门槛。 本例目标JD明确要求交付与使用；复用为扩展参照。",
+      "description": "虚构新增记录补上单部门正式交付和使用迭代，个人落点随材料改变；其余轴仍按原有证据处理。",
+      "default_axis": "A4",
+      "scale_id": "task-responsibility-5-v1",
+      "axes": [
+        {
+          "id": "A1",
+          "label": "业务洞察",
+          "label_lines": [
+            "业务洞察"
+          ],
+          "task_ref": "D1",
+          "anchors": [
+            "能解释业务问题",
+            "参与需求调研或局部分析",
+            "独立定义业务问题与需求",
+            "主导复杂业务取舍与验证",
+            "跨业务沉淀问题选择方法"
+          ],
+          "required_level": 3,
+          "personal_level": 3,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "已核验职责要求识别高价值流程并把模糊问题转成需求和成功指标，以独立完成任务定义作为3级参照。",
+          "personal_reason": "虚构材料：主导企业需求与交付。",
+          "gap_note": "企业基础可迁移。",
+          "source_refs": [
+            "R015",
+            "R029"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E1"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A2",
+          "label": "AI方案设计",
+          "label_lines": [
+            "AI方案",
+            "设计"
+          ],
+          "task_ref": "D2",
+          "anchors": [
+            "能解释AI方案原理",
+            "参与方案或完成局部配置",
+            "独立设计AI任务方案与边界",
+            "主导复杂系统与异常方案取舍",
+            "跨项目建立方案设计方法"
+          ],
+          "required_level": 3,
+          "personal_level": 2,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "职责要求与工程团队共同确定工作流、数据、权限及人工确认，按独立方案设计的3级取保守参照，不因有架构一词直接判4级。",
+          "personal_reason": "虚构材料：资料检索Demo与离线实践，未展开完整方案取舍。",
+          "gap_note": "展示已有设计过程。",
+          "source_refs": [
+            "R015",
+            "R001"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A3",
+          "label": "效果评估",
+          "label_lines": [
+            "效果",
+            "评估"
+          ],
+          "task_ref": "D3",
+          "anchors": [
+            "能解释效果标准",
+            "已有测试或局部验证实践",
+            "独立定义样本、标准与评估决定",
+            "主导复杂失败分析与生产门槛",
+            "跨产品建立稳定评估方法"
+          ],
+          "required_level": 3,
+          "personal_level": 2,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "职责要求设计评估、识别失败并决定可用门槛，以独立评估决定为3级参照；不把JD出现次数作为分值。",
+          "personal_reason": "虚构材料明确有离线测试，未展开独立验收决定。",
+          "gap_note": "已有测试实践，不重复当作完全不会评估。",
+          "source_refs": [
+            "R015",
+            "R001"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A4",
+          "label": "应用交付",
+          "label_lines": [
+            "应用交付"
+          ],
+          "task_ref": "D4",
+          "anchors": [
+            "能解释应用交付步骤",
+            "推进内部试用或局部交付准备",
+            "独立承担正式AI任务交付",
+            "主导复杂生产交付与异常处理",
+            "跨项目建立AI交付方法"
+          ],
+          "required_level": 3,
+          "personal_level": 3,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "端到端应用职责包括发布；结合正式上线条件，采用独立正式AI任务交付的3级参照。具体JD仍可能只要求核心参与。",
+          "personal_reason": "虚构新增E3：本人完成单部门正式AI交付、真实使用与调整。",
+          "gap_note": "新材料已改变阶段判断；不升级为规模运营。",
+          "source_refs": [
+            "R015",
+            "R001"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E3"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A5",
+          "label": "使用迭代",
+          "label_lines": [
+            "使用",
+            "迭代"
+          ],
+          "task_ref": "D4",
+          "anchors": [
+            "能解释采用与反馈问题",
+            "参与用户反馈或局部改进",
+            "独立跟进AI使用结果与迭代",
+            "主导跨团队采用及复杂运营改进",
+            "跨场景建立持续改进体系"
+          ],
+          "required_level": 3,
+          "personal_level": 3,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "职责要求跟踪采用、任务完成和使用反馈，持续改进；采用独立使用结果责任的3级参照。",
+          "personal_reason": "虚构新增E3：本人完成单部门正式AI交付、真实使用与调整。",
+          "gap_note": "新材料已改变阶段判断；不升级为规模运营。",
+          "source_refs": [
+            "R015",
+            "R029"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E3"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A6",
+          "label": "产品化复用",
+          "label_lines": [
+            "产品化",
+            "复用"
+          ],
+          "task_ref": "D5",
+          "anchors": [
+            "能解释复用的价值",
+            "已做共性能力设计或局部配置",
+            "验证跨场景复用与交付成本",
+            "主导标准化与定制化的复杂取舍",
+            "跨产品建立复用与交付体系"
+          ],
+          "required_level": 4,
+          "personal_level": null,
+          "status": "information_gap",
+          "basis": "unrated",
+          "required_reason": "跨场景产品化职责要求平衡标准化与定制化并控制多行业实施成本，归为复杂复用取舍的4级参照。这是扩展责任，不是每个应用岗的门槛。",
+          "personal_reason": "虚构材料未描述AI多场景复用。",
+          "gap_note": "复用是扩展责任，按具体JD决定是否要补。",
+          "source_refs": [
+            "R021"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E1",
+            "E2"
+          ],
+          "judgment_refs": [
+            "J2"
+          ]
+        }
+      ]
+    }
+  },
+  "revision_note": {
+    "reason": "新增正式交付与使用改进材料改变阶段判断",
+    "changed_evidence_ids": [
+      "E3"
+    ],
+    "changed_judgment_ids": [
+      "J1",
+      "J2"
+    ]
+  }
+}

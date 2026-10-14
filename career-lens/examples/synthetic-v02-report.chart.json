@@ -1,0 +1,39 @@
+{
+  "mode": "radar",
+  "market_rated": 6,
+  "personal_rated": 6,
+  "personal_segments": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      0
+    ]
+  ],
+  "dimensions": [
+    "business",
+    "ai_solution",
+    "agent_design",
+    "evaluation",
+    "delivery",
+    "value_iteration"
+  ]
+}

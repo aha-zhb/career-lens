@@ -1,0 +1,12 @@
+[project]
+name = "career-lens"
+version = "0.3.0"
+description = "Local validation, normalization, reporting, and visualization helpers for the Career Lens skill"
+requires-python = ">=3.11"
+dependencies = ["jsonschema>=4.23,<5", "matplotlib>=3.9,<4", "Jinja2>=3.1,<4", "Markdown>=3.7,<4"]
+
+[project.optional-dependencies]
+pdf = ["reportlab>=4.2,<5"]
+
+[tool.uv]
+package = false

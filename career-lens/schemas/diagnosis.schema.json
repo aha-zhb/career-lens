@@ -1,0 +1,404 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://career-lens.local/schemas/diagnosis.schema.json",
+  "title": "Career Lens composed diagnosis",
+  "type": "object",
+  "required": [
+    "case_id",
+    "synthetic",
+    "intake",
+    "sources",
+    "market_model",
+    "candidate_evidence",
+    "beliefs",
+    "report_content"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "intake": {
+      "$ref": "https://career-lens.local/schemas/intake.schema.json"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "https://career-lens.local/schemas/jd.schema.json"
+      }
+    },
+    "market_model": {
+      "$ref": "https://career-lens.local/schemas/market-profile.schema.json"
+    },
+    "candidate_evidence": {
+      "$ref": "https://career-lens.local/schemas/candidate-evidence.schema.json"
+    },
+    "beliefs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "belief_id",
+          "statement",
+          "comparison",
+          "explanation",
+          "dimension_refs"
+        ],
+        "properties": {
+          "belief_id": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "comparison": {
+            "enum": [
+              "supported",
+              "partly_supported",
+              "contradicted",
+              "unresolved"
+            ]
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "dimension_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "report_content": {
+      "type": "object",
+      "required": [
+        "actions",
+        "followup_questions"
+      ],
+      "properties": {
+        "three_conclusions": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string"
+          }
+        },
+        "actions": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "why",
+              "task",
+              "deliverable",
+              "check",
+              "period",
+              "action_type",
+              "capability_ids",
+              "evidence_ids"
+            ],
+            "properties": {
+              "why": {
+                "type": "string"
+              },
+              "task": {
+                "type": "string"
+              },
+              "deliverable": {
+                "type": "string"
+              },
+              "check": {
+                "type": "string"
+              },
+              "period": {
+                "type": "string"
+              },
+              "action_type": {
+                "enum": [
+                  "capability_gap",
+                  "evidence_gap",
+                  "market_research",
+                  "positioning",
+                  "interview_practice"
+                ]
+              },
+              "capability_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "followup_questions": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "string"
+          }
+        },
+        "headline": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 180
+        },
+        "findings": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "kind",
+              "title",
+              "text",
+              "capability_ids",
+              "evidence_ids",
+              "source_ids"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "advantage",
+                  "obstacle",
+                  "reframe"
+                ]
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 220
+              },
+              "capability_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "differences": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "market_requirement",
+              "personal_evidence",
+              "implication",
+              "capability_ids",
+              "source_ids",
+              "evidence_ids"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 40
+              },
+              "market_requirement": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 260
+              },
+              "personal_evidence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 260
+              },
+              "implication": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 260
+              },
+              "capability_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "scope_summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320
+        },
+        "chart_mode": {
+          "enum": [
+            "auto",
+            "radar",
+            "relation"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "workflow_state": {
+      "enum": [
+        "INIT",
+        "BASELINE_CAPTURED",
+        "BASELINE_SKIPPED",
+        "TARGET_SET",
+        "MARKET_PROFILE_BUILT",
+        "MARKET_QUALITY_CHECKED",
+        "CANDIDATE_EVIDENCE_MAPPED",
+        "FOLLOWUP",
+        "GAPS_CLASSIFIED",
+        "REPORT_VALIDATED",
+        "REPORT_RENDERED",
+        "DELIVERED",
+        "DISPUTED",
+        "REVISED"
+      ]
+    },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "revision",
+          "revised_at",
+          "change_reason",
+          "previous_assessment",
+          "new_material_ids"
+        ],
+        "properties": {
+          "revision": {
+            "type": "integer",
+            "minimum": 2
+          },
+          "revised_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "change_reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "previous_assessment": {
+            "type": "string",
+            "minLength": 1
+          },
+          "new_material_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "schema_version": {
+      "const": "0.2"
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "0.2"
+          }
+        },
+        "required": [
+          "schema_version"
+        ]
+      },
+      "then": {
+        "properties": {
+          "report_content": {
+            "required": [
+              "headline",
+              "findings",
+              "differences",
+              "scope_summary"
+            ]
+          },
+          "market_model": {
+            "required": [
+              "schema_version",
+              "reference_label",
+              "research_rounds",
+              "stop_reason",
+              "capability_tree",
+              "radar_dimension_ids"
+            ]
+          },
+          "candidate_evidence": {
+            "required": [
+              "schema_version"
+            ]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "report_content": {
+            "required": [
+              "three_conclusions"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

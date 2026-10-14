@@ -1,0 +1,370 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://career-lens.local/schemas/market-profile.schema.json",
+  "title": "Independently built market profile",
+  "type": "object",
+  "required": [
+    "role_track",
+    "seniority_scope",
+    "geography",
+    "date_window",
+    "generated_at",
+    "eligible_jd_count",
+    "sampling_method",
+    "sources",
+    "sample_limitations",
+    "market_confidence",
+    "dimensions",
+    "candidate_jd_count",
+    "quality_review"
+  ],
+  "properties": {
+    "role_track": {
+      "type": "string"
+    },
+    "seniority_scope": {
+      "type": "string"
+    },
+    "geography": {
+      "type": "string"
+    },
+    "date_window": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "eligible_jd_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sampling_method": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "sample_limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "market_confidence": {
+      "enum": [
+        "sufficient_for_rating",
+        "exploratory_only",
+        "insufficient",
+        "mixed"
+      ]
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "importance",
+          "role_tasks",
+          "supporting_sources",
+          "market_level",
+          "level_rationale",
+          "rubric"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "subskills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "importance": {
+            "enum": [
+              "must_have",
+              "core",
+              "differentiator",
+              "optional",
+              "unresolved"
+            ]
+          },
+          "role_tasks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "supporting_sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "market_level": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "level_rationale": {
+            "type": "string"
+          },
+          "rubric": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "level",
+                "behavior"
+              ],
+              "properties": {
+                "level": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "behavior": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "market_level_range": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            }
+          },
+          "component_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "rating_review": {
+            "type": "object",
+            "required": [
+              "approved",
+              "scope",
+              "rationale"
+            ],
+            "properties": {
+              "approved": {
+                "type": "boolean"
+              },
+              "scope": {
+                "enum": [
+                  "target_market",
+                  "role_benchmark"
+                ]
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "hard_filters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "radar_dimension_ids": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "candidate_jd_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "quality_review": {
+      "type": "object",
+      "required": [
+        "approved_for_rating",
+        "rationale"
+      ],
+      "properties": {
+        "approved_for_rating": {
+          "type": "boolean"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "schema_version": {
+      "const": "0.2"
+    },
+    "reference_label": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "capability_tree": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "parent_dimension_id",
+          "tasks",
+          "source_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "parent_dimension_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tasks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "research_rounds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "strategy",
+          "new_source_ids",
+          "changed_conclusion",
+          "remaining_gaps"
+        ],
+        "properties": {
+          "strategy": {
+            "type": "string",
+            "minLength": 1
+          },
+          "new_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "changed_conclusion": {
+            "type": "boolean"
+          },
+          "remaining_gaps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "stop_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "geography_mode": {
+      "enum": [
+        "role_first",
+        "location_first"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "schema_version"
+        ]
+      },
+      "then": {
+        "required": [
+          "capability_tree",
+          "research_rounds",
+          "stop_reason",
+          "reference_label",
+          "radar_dimension_ids"
+        ],
+        "properties": {
+          "capability_tree": {
+            "minItems": 1
+          },
+          "research_rounds": {
+            "minItems": 1
+          },
+          "dimensions": {
+            "items": {
+              "required": [
+                "component_ids",
+                "rating_review"
+              ],
+              "properties": {
+                "component_ids": {
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

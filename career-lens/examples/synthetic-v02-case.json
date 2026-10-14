@@ -1,0 +1,771 @@
+{
+  "case_id": "synthetic-v02-closed-loop",
+  "synthetic": true,
+  "schema_version": "0.2",
+  "intake": {
+    "target": {
+      "role": "AI应用产品经理",
+      "role_track": "ai_agent_application_pm",
+      "location": "合成地区",
+      "experience_years": 5,
+      "seniority": "中高级",
+      "sub_role": "企业Agent应用产品经理",
+      "as_of": "2026-10-11",
+      "scope_note": "虚构情境，仅验证流程"
+    },
+    "prior_belief_status": "skipped",
+    "prior_beliefs": [],
+    "provided_jd_ids": [
+      "SYNTH-J1"
+    ],
+    "candidate_material_ids": [
+      "SYNTH-M1"
+    ]
+  },
+  "sources": [
+    {
+      "id": "SYNTH-J1",
+      "organization": "虚构企业A",
+      "title": "合成企业AI应用产品经理",
+      "role_track": "ai_agent_application_pm",
+      "location": "合成地区",
+      "seniority": "合成中高级",
+      "collected_at": "2026-10-11",
+      "published_at": null,
+      "url": "https://example.invalid/synthetic-job",
+      "description_summary": "合成职责：独立研究业务任务、比较AI方案、设计工具与人工边界，负责评估、交付与使用反馈。",
+      "responsibilities": [
+        "虚构：对单任务从定义、验收到反馈负责"
+      ],
+      "requirements": [
+        "虚构：独立任务责任"
+      ],
+      "source_status": "user_provided",
+      "source_status_note": "完全虚构，仅供端到端演示。",
+      "eligibility": "included",
+      "exclusion_reason": null,
+      "dedupe_fingerprint": "synthetic-00000001",
+      "source_kind": "job",
+      "source_layer": "target_market",
+      "body_access": "full"
+    }
+  ],
+  "market_model": {
+    "schema_version": "0.2",
+    "role_track": "ai_agent_application_pm",
+    "seniority_scope": "合成中高级",
+    "geography": "合成地区",
+    "date_window": "合成示例",
+    "generated_at": "2026-10-11",
+    "eligible_jd_count": 1,
+    "candidate_jd_count": 1,
+    "sampling_method": "合成示例：预先写明虚构任务，不作市场推断",
+    "sources": [
+      "SYNTH-J1"
+    ],
+    "sample_limitations": [
+      "合成演示数据，不能用于职业判断。"
+    ],
+    "market_confidence": "sufficient_for_rating",
+    "quality_review": {
+      "approved_for_rating": true,
+      "rationale": "虚构任务锚点仅供流程测试"
+    },
+    "reference_label": "合成任务参照｜不是市场结论",
+    "research_rounds": [
+      {
+        "strategy": "审阅虚构岗位任务",
+        "new_source_ids": [
+          "SYNTH-J1"
+        ],
+        "changed_conclusion": false,
+        "remaining_gaps": []
+      }
+    ],
+    "stop_reason": "合成任务已覆盖演示目的",
+    "dimensions": [
+      {
+        "id": "business",
+        "name": "业务判断",
+        "component_ids": [
+          "C01",
+          "C08-opportunity"
+        ],
+        "role_tasks": [
+          "调查业务原流程、用户与约束",
+          "选定值得解决的任务并定义成功条件"
+        ],
+        "subskills": [
+          "调查业务原流程、用户与约束",
+          "选定值得解决的任务并定义成功条件"
+        ],
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "描述用户与痛点，尚未形成任务规格"
+          },
+          {
+            "level": 2,
+            "behavior": "在指导下整理原流程与需求"
+          },
+          {
+            "level": 3,
+            "behavior": "独立完成常规业务调研、任务定义与优先级选择"
+          },
+          {
+            "level": 4,
+            "behavior": "主导复杂业务的约束冲突和机会取舍，以用户证据验证需求"
+          },
+          {
+            "level": 5,
+            "behavior": "跨场景建立需求发现与取舍方法，指导团队"
+          }
+        ],
+        "importance": "core",
+        "market_level": 3,
+        "supporting_sources": [
+          "SYNTH-J1"
+        ],
+        "level_rationale": "虚构岗位独立承担常规任务，对应示例L3。",
+        "rating_review": {
+          "approved": true,
+          "scope": "target_market",
+          "rationale": "虚构任务锚点支持示例L3"
+        }
+      },
+      {
+        "id": "ai_solution",
+        "name": "AI方案取舍",
+        "component_ids": [
+          "C02",
+          "C08-innovation"
+        ],
+        "role_tasks": [
+          "比较规则、检索、生成和Agent方案",
+          "结合质量、成本、延迟与数据约束解释选择"
+        ],
+        "subskills": [
+          "比较规则、检索、生成和Agent方案",
+          "结合质量、成本、延迟与数据约束解释选择"
+        ],
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "解释基础方案概念"
+          },
+          {
+            "level": 2,
+            "behavior": "在指导下比较常用方案并识别限制"
+          },
+          {
+            "level": 3,
+            "behavior": "独立根据约束比较方案，以测试结果解释选择"
+          },
+          {
+            "level": 4,
+            "behavior": "主导复杂方案的质量、成本、延迟和风险取舍，设计比较实验"
+          },
+          {
+            "level": 5,
+            "behavior": "跨项目建立可复用的选型评估方法并指导团队"
+          }
+        ],
+        "importance": "core",
+        "market_level": 3,
+        "supporting_sources": [
+          "SYNTH-J1"
+        ],
+        "level_rationale": "虚构岗位独立承担常规任务，对应示例L3。",
+        "rating_review": {
+          "approved": true,
+          "scope": "target_market",
+          "rationale": "虚构任务锚点支持示例L3"
+        }
+      },
+      {
+        "id": "agent_design",
+        "name": "Agent设计",
+        "component_ids": [
+          "C03"
+        ],
+        "role_tasks": [
+          "拆解任务、工具、上下文与交互",
+          "设计权限、失败恢复和人工接管"
+        ],
+        "subskills": [
+          "拆解任务、工具、上下文与交互",
+          "设计权限、失败恢复和人工接管"
+        ],
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "描述Agent任务与工具概念"
+          },
+          {
+            "level": 2,
+            "behavior": "在指导下搭建常规工作流"
+          },
+          {
+            "level": 3,
+            "behavior": "独立设计输入输出、工具调用、异常和人工介入"
+          },
+          {
+            "level": 4,
+            "behavior": "主导复杂执行链路、权限与恢复设计，用运行证据优化"
+          },
+          {
+            "level": 5,
+            "behavior": "跨业务建立稳定的Agent设计模式和治理方法"
+          }
+        ],
+        "importance": "core",
+        "market_level": 3,
+        "supporting_sources": [
+          "SYNTH-J1"
+        ],
+        "level_rationale": "虚构岗位独立承担常规任务，对应示例L3。",
+        "rating_review": {
+          "approved": true,
+          "scope": "target_market",
+          "rationale": "虚构任务锚点支持示例L3"
+        }
+      },
+      {
+        "id": "evaluation",
+        "name": "效果验证",
+        "component_ids": [
+          "C04"
+        ],
+        "role_tasks": [
+          "定义任务成功、样本和判分方法",
+          "分析失败、调整方案并复测"
+        ],
+        "subskills": [
+          "定义任务成功、样本和判分方法",
+          "分析失败、调整方案并复测"
+        ],
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "列举质量问题或指标名"
+          },
+          {
+            "level": 2,
+            "behavior": "在指导下运行已有评测并记录问题"
+          },
+          {
+            "level": 3,
+            "behavior": "独立定义任务标准、样本与坏例分类，实施复测"
+          },
+          {
+            "level": 4,
+            "behavior": "主导复杂任务评测，校准判分与覆盖，依据证据迭代"
+          },
+          {
+            "level": 5,
+            "behavior": "跨项目建立长期评测、回归与质量治理方法"
+          }
+        ],
+        "importance": "core",
+        "market_level": 3,
+        "supporting_sources": [
+          "SYNTH-J1"
+        ],
+        "level_rationale": "虚构岗位独立承担常规任务，对应示例L3。",
+        "rating_review": {
+          "approved": true,
+          "scope": "target_market",
+          "rationale": "虚构任务锚点支持示例L3"
+        }
+      },
+      {
+        "id": "delivery",
+        "name": "产品交付",
+        "component_ids": [
+          "C06"
+        ],
+        "role_tasks": [
+          "将任务转为PRD和验收要求",
+          "协调研发、测试与业务交付，管理上线边界"
+        ],
+        "subskills": [
+          "将任务转为PRD和验收要求",
+          "协调研发、测试与业务交付，管理上线边界"
+        ],
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "描述产品开发流程"
+          },
+          {
+            "level": 2,
+            "behavior": "在指导下完成需求文档或交付模块"
+          },
+          {
+            "level": 3,
+            "behavior": "独立负责常规产品从需求、协作、验收到交付迭代"
+          },
+          {
+            "level": 4,
+            "behavior": "主导复杂产品的依赖、灰度、风险与验收，解决跨方冲突"
+          },
+          {
+            "level": 5,
+            "behavior": "跨项目建立稳定的交付体系并指导团队"
+          }
+        ],
+        "importance": "core",
+        "market_level": 3,
+        "supporting_sources": [
+          "SYNTH-J1"
+        ],
+        "level_rationale": "虚构岗位独立承担常规任务，对应示例L3。",
+        "rating_review": {
+          "approved": true,
+          "scope": "target_market",
+          "rationale": "虚构任务锚点支持示例L3"
+        }
+      },
+      {
+        "id": "value_iteration",
+        "name": "价值与迭代",
+        "component_ids": [
+          "C05",
+          "C07",
+          "C08-validation"
+        ],
+        "role_tasks": [
+          "建立使用与业务基线",
+          "记录真实使用、成本和反馈，决定继续、调整或停止"
+        ],
+        "subskills": [
+          "建立使用与业务基线",
+          "记录真实使用、成本和反馈，决定继续、调整或停止"
+        ],
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "描述使用或业务价值目标"
+          },
+          {
+            "level": 2,
+            "behavior": "在指导下整理使用记录与反馈"
+          },
+          {
+            "level": 3,
+            "behavior": "独立定义基线和指标，完成真实使用、反馈与一次迭代"
+          },
+          {
+            "level": 4,
+            "behavior": "主导复杂场景价值评估与归因限制处理，以证据决定投入"
+          },
+          {
+            "level": 5,
+            "behavior": "跨项目建立运营与投资决策方法并验证长期效果"
+          }
+        ],
+        "importance": "core",
+        "market_level": 3,
+        "supporting_sources": [
+          "SYNTH-J1"
+        ],
+        "level_rationale": "虚构岗位独立承担常规任务，对应示例L3。",
+        "rating_review": {
+          "approved": true,
+          "scope": "target_market",
+          "rationale": "虚构任务锚点支持示例L3"
+        }
+      }
+    ],
+    "capability_tree": [
+      {
+        "id": "C01",
+        "name": "C01合成任务",
+        "parent_dimension_id": "business",
+        "tasks": [
+          "调查业务原流程、用户与约束",
+          "选定值得解决的任务并定义成功条件"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "id": "C08-opportunity",
+        "name": "C08-opportunity合成任务",
+        "parent_dimension_id": "business",
+        "tasks": [
+          "调查业务原流程、用户与约束",
+          "选定值得解决的任务并定义成功条件"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "id": "C02",
+        "name": "C02合成任务",
+        "parent_dimension_id": "ai_solution",
+        "tasks": [
+          "比较规则、检索、生成和Agent方案",
+          "结合质量、成本、延迟与数据约束解释选择"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "id": "C08-innovation",
+        "name": "C08-innovation合成任务",
+        "parent_dimension_id": "ai_solution",
+        "tasks": [
+          "比较规则、检索、生成和Agent方案",
+          "结合质量、成本、延迟与数据约束解释选择"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "id": "C03",
+        "name": "C03合成任务",
+        "parent_dimension_id": "agent_design",
+        "tasks": [
+          "拆解任务、工具、上下文与交互",
+          "设计权限、失败恢复和人工接管"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "id": "C04",
+        "name": "C04合成任务",
+        "parent_dimension_id": "evaluation",
+        "tasks": [
+          "定义任务成功、样本和判分方法",
+          "分析失败、调整方案并复测"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "id": "C06",
+        "name": "C06合成任务",
+        "parent_dimension_id": "delivery",
+        "tasks": [
+          "将任务转为PRD和验收要求",
+          "协调研发、测试与业务交付，管理上线边界"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "id": "C05",
+        "name": "C05合成任务",
+        "parent_dimension_id": "value_iteration",
+        "tasks": [
+          "建立使用与业务基线",
+          "记录真实使用、成本和反馈，决定继续、调整或停止"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "id": "C07",
+        "name": "C07合成任务",
+        "parent_dimension_id": "value_iteration",
+        "tasks": [
+          "建立使用与业务基线",
+          "记录真实使用、成本和反馈，决定继续、调整或停止"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "id": "C08-validation",
+        "name": "C08-validation合成任务",
+        "parent_dimension_id": "value_iteration",
+        "tasks": [
+          "建立使用与业务基线",
+          "记录真实使用、成本和反馈，决定继续、调整或停止"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      }
+    ],
+    "radar_dimension_ids": [
+      "business",
+      "ai_solution",
+      "agent_design",
+      "evaluation",
+      "delivery",
+      "value_iteration"
+    ]
+  },
+  "candidate_evidence": {
+    "schema_version": "0.2",
+    "candidate_id": "synthetic-candidate",
+    "materials": [
+      {
+        "id": "SYNTH-M1",
+        "kind": "project_description",
+        "provided_by_user": true,
+        "filename_redacted": "synthetic-raw.txt"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "SYNTH-E1",
+        "capability_id": "business",
+        "source_material_id": "SYNTH-M1",
+        "source_excerpt_or_summary": "合成：访谈6位业务用户，梳理原流程，独立选择每周重复的合同字段核对任务，定义不漏关键字段的验收标准。",
+        "evidence_type": "direct",
+        "involvement": "lead",
+        "strength": "moderate",
+        "outcome": "合成行为与结果"
+      },
+      {
+        "evidence_id": "SYNTH-E2",
+        "capability_id": "ai_solution",
+        "source_material_id": "SYNTH-M1",
+        "source_excerpt_or_summary": "合成：比较规则与RAG，逐条跑测试记录成本、错误和耗时，根据含糊字段失败选择检索加人工复核。",
+        "evidence_type": "direct",
+        "involvement": "lead",
+        "strength": "moderate",
+        "outcome": "合成行为与结果"
+      },
+      {
+        "evidence_id": "SYNTH-E3",
+        "capability_id": "agent_design",
+        "source_material_id": "SYNTH-M1",
+        "source_excerpt_or_summary": "合成：独立定义工具输入输出和权限，工具失败转人工；复盘跨系统权限冲突并调整链路。",
+        "evidence_type": "direct",
+        "involvement": "lead",
+        "strength": "moderate",
+        "outcome": "合成行为与结果"
+      },
+      {
+        "evidence_id": "SYNTH-E4",
+        "capability_id": "evaluation",
+        "source_material_id": "SYNTH-M1",
+        "source_excerpt_or_summary": "合成：独立组织评估，按重要字段漏检、误报与信息不足分组校准评分，发现坏例后调整流程并复测。",
+        "evidence_type": "direct",
+        "involvement": "lead",
+        "strength": "moderate",
+        "outcome": "合成行为与结果"
+      },
+      {
+        "evidence_id": "SYNTH-E5",
+        "capability_id": "delivery",
+        "source_material_id": "SYNTH-M1",
+        "source_excerpt_or_summary": "合成：负责PRD与测试验收，协调两方依赖、灰度和回退，完成小范围业务正式交付。",
+        "evidence_type": "direct",
+        "involvement": "lead",
+        "strength": "moderate",
+        "outcome": "合成行为与结果"
+      },
+      {
+        "evidence_id": "SYNTH-E6",
+        "capability_id": "value_iteration",
+        "source_material_id": "SYNTH-M1",
+        "source_excerpt_or_summary": "合成：产品仅5位用户，但连续4周使用；记录人工基线、每次审核耗时与失败，改动后复测并明确归因限制。",
+        "evidence_type": "direct",
+        "involvement": "lead",
+        "strength": "moderate",
+        "outcome": "合成行为与结果"
+      }
+    ],
+    "assessments": [
+      {
+        "dimension_id": "business",
+        "status": "verified",
+        "score": 3,
+        "rationale": "合成：访谈6位业务用户，梳理原流程，独立选择每周重复的合同字段核对任务，定义不漏关键字段的验收标准。 对应独立任务或复杂责任锚点，仅描述虚构材料。",
+        "evidence_ids": [
+          "SYNTH-E1"
+        ],
+        "missing_evidence": [],
+        "summary": "独立业务任务"
+      },
+      {
+        "dimension_id": "ai_solution",
+        "status": "verified",
+        "score": 3,
+        "rationale": "合成：比较规则与RAG，逐条跑测试记录成本、错误和耗时，根据含糊字段失败选择检索加人工复核。 对应独立任务或复杂责任锚点，仅描述虚构材料。",
+        "evidence_ids": [
+          "SYNTH-E2"
+        ],
+        "missing_evidence": [],
+        "summary": "有方案比较"
+      },
+      {
+        "dimension_id": "agent_design",
+        "status": "verified",
+        "score": 4,
+        "rationale": "合成：独立定义工具输入输出和权限，工具失败转人工；复盘跨系统权限冲突并调整链路。 对应独立任务或复杂责任锚点，仅描述虚构材料。",
+        "evidence_ids": [
+          "SYNTH-E3"
+        ],
+        "missing_evidence": [],
+        "summary": "复杂异常与接管"
+      },
+      {
+        "dimension_id": "evaluation",
+        "status": "verified",
+        "score": 4,
+        "rationale": "合成：独立组织评估，按重要字段漏检、误报与信息不足分组校准评分，发现坏例后调整流程并复测。 对应独立任务或复杂责任锚点，仅描述虚构材料。",
+        "evidence_ids": [
+          "SYNTH-E4"
+        ],
+        "missing_evidence": [],
+        "summary": "有坏例与复测"
+      },
+      {
+        "dimension_id": "delivery",
+        "status": "verified",
+        "score": 4,
+        "rationale": "合成：负责PRD与测试验收，协调两方依赖、灰度和回退，完成小范围业务正式交付。 对应独立任务或复杂责任锚点，仅描述虚构材料。",
+        "evidence_ids": [
+          "SYNTH-E5"
+        ],
+        "missing_evidence": [],
+        "summary": "小范围正式交付"
+      },
+      {
+        "dimension_id": "value_iteration",
+        "status": "verified",
+        "score": 3,
+        "rationale": "合成：产品仅5位用户，但连续4周使用；记录人工基线、每次审核耗时与失败，改动后复测并明确归因限制。 对应独立任务或复杂责任锚点，仅描述虚构材料。",
+        "evidence_ids": [
+          "SYNTH-E6"
+        ],
+        "missing_evidence": [],
+        "summary": "有连续使用与反馈"
+      }
+    ],
+    "events": []
+  },
+  "beliefs": [],
+  "report_content": {
+    "headline": "你已有小范围AI任务交付、评估和反馈闭环。用户数量小不否定这些经历，下一步应增强复杂任务举证。",
+    "findings": [
+      {
+        "kind": "advantage",
+        "title": "基础：闭环已经存在",
+        "text": "5位用户连续使用4周，并有质量标准、坏例和改动复测。",
+        "capability_ids": [
+          "evaluation",
+          "delivery",
+          "value_iteration"
+        ],
+        "evidence_ids": [
+          "SYNTH-E4",
+          "SYNTH-E5",
+          "SYNTH-E6"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "kind": "obstacle",
+        "title": "阻碍：复杂责任还需完整呈现",
+        "text": "案例可进一步展开跨系统依赖、异常和成本判断，便于审阅复杂责任。",
+        "capability_ids": [
+          "agent_design",
+          "ai_solution"
+        ],
+        "evidence_ids": [
+          "SYNTH-E3",
+          "SYNTH-E2"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      },
+      {
+        "kind": "reframe",
+        "title": "投入：深化已有结果",
+        "text": "先补复杂情境的过程说明，再决定是否扩大用户。",
+        "capability_ids": [
+          "value_iteration"
+        ],
+        "evidence_ids": [
+          "SYNTH-E6"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      }
+    ],
+    "differences": [
+      {
+        "title": "按实际责任解释下一步",
+        "market_requirement": "虚构岗位独立负责任务定义、质量与真实使用。",
+        "personal_evidence": "5位用户连续使用4周，并有质量标准、坏例和改动复测。",
+        "implication": "案例可进一步展开跨系统依赖、异常和成本判断，便于审阅复杂责任。",
+        "capability_ids": [
+          "evaluation",
+          "delivery",
+          "value_iteration",
+          "agent_design",
+          "ai_solution"
+        ],
+        "evidence_ids": [
+          "SYNTH-E4",
+          "SYNTH-E5",
+          "SYNTH-E6",
+          "SYNTH-E3",
+          "SYNTH-E2"
+        ],
+        "source_ids": [
+          "SYNTH-J1"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "why": "整理已有复杂任务案例",
+        "task": "整理权限冲突、评分校准、灰度决策与复测。",
+        "deliverable": "一份可回溯的脱敏任务案例及结果记录。",
+        "check": "本人责任清楚，选择有依据，结果和项目阶段准确。",
+        "period": "先整理；建议两周。",
+        "action_type": "positioning",
+        "capability_ids": [
+          "agent_design",
+          "evaluation",
+          "delivery"
+        ],
+        "evidence_ids": [
+          "SYNTH-E3",
+          "SYNTH-E4",
+          "SYNTH-E5"
+        ]
+      },
+      {
+        "why": "选择下一项业务验证",
+        "task": "依据现有反馈选择新任务，保留成本与失败基线。",
+        "deliverable": "一份可回溯的脱敏任务案例及结果记录。",
+        "check": "本人责任清楚，选择有依据，结果和项目阶段准确。",
+        "period": "先整理；建议两周。",
+        "action_type": "positioning",
+        "capability_ids": [
+          "value_iteration"
+        ],
+        "evidence_ids": [
+          "SYNTH-E6"
+        ]
+      }
+    ],
+    "followup_questions": [],
+    "scope_summary": "全部岗位、经历和等级均为虚构演示。L3代表独立常规任务，L4代表主导复杂任务，不是录用概率。",
+    "chart_mode": "auto"
+  },
+  "workflow_state": "REPORT_VALIDATED"
+}

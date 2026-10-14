@@ -1,0 +1,77 @@
+# {{ intake.target.role }}｜市场认知与证据诊断
+
+> {% if synthetic %}合成演示案例：能力画像、个人材料和结论均为虚构，不代表真实市场或个人。{% else %}个人判断仅表示“材料证据支持”，不代表第三方真实性核验。{% endif %}
+> 范围：{{ intake.target.location }}｜{{ intake.target.seniority }}｜{{ intake.target.sub_role }}｜截至 {{ intake.target.as_of }}
+
+## 1. 三个核心结论
+{% for item in report_content.three_conclusions %}
+- {{ item }}
+{% endfor %}
+
+{% if chart_path %}![市场要求与个人材料证据]({{ chart_path }}){% else %}{{ chart_note }}{% endif %}
+
+## 2. 原认知与市场证据
+{% if intake.prior_belief_status == 'captured' and beliefs %}
+| 原认知 | 对照结果 | 说明 |
+|---|---|---|
+{% for belief in beliefs %}| {{ belief.statement }} | {% if belief.comparison == 'supported' %}得到支持{% elif belief.comparison == 'partly_supported' %}部分支持{% elif belief.comparison == 'contradicted' %}与市场证据不符{% else %}尚无结论{% endif %} | {{ belief.explanation }} |
+{% endfor %}
+{% else %}
+用户跳过或未提供认知基线。可以呈现市场发现，但不能判断用户存在认知盲区。
+{% endif %}
+
+样本覆盖：候选 {{ market_model.candidate_jd_count }} 条；纳入 {{ market_model.eligible_jd_count }} 条。市场判断：{{ '可评级（已复核）' if market_model.quality_review.approved_for_rating else '探索版，暂不评分' }}。复核理由：{{ market_model.quality_review.rationale }}
+
+市场样本边界：{{ market_model.sample_limitations|join('；') }}
+
+## 3. 完整市场能力树
+{% for d in market_model.dimensions %}
+### {{ d.name }}（市场期望：{% if d.market_level is none %}待验证{% else %}L{{ d.market_level }}{% endif %}｜{% if d.importance == 'must_have' %}硬门槛{% elif d.importance == 'core' %}核心{% elif d.importance == 'differentiator' %}差异化{% elif d.importance == 'optional' %}可选{% else %}待验证{% endif %}）
+
+{{ d.level_rationale }}　来源：{% for ref in d.supporting_sources %}{% set src = sources|selectattr('id', 'equalto', ref)|first %}{% if synthetic %}{{ ref }}（合成虚构来源）{% else %}[{{ ref }}｜{{ src.title }}]({{ src.url }}){% endif %}{% if not loop.last %}、{% endif %}{% endfor %}
+
+{% for anchor in d.rubric|sort(attribute='level') %}- L{{ anchor.level }}：{{ anchor.behavior }}
+{% endfor %}
+{% if d.subskills %}子技能：{{ d.subskills|join('、') }}。{% endif %}
+实际任务：{{ d.role_tasks|join('；') }}
+{% endfor %}
+
+## 4. 个人证据与差距
+能力差距须有低于目标的行为证据或明确的任务反证；证据差距表示材料不足；“待验证”表示当前不能判断。未提及不代表没做过或不知道。
+{% if candidate_evidence.materials %}
+| 能力 | 状态/差距类型 | 材料评分 | 证据与判断 | 下一步所需证据 |
+|---|---|---:|---|---|
+{% for d in market_model.dimensions %}{% set p = candidate_evidence.assessments|selectattr('dimension_id', 'equalto', d.id)|first %}{% set evs = candidate_evidence.evidence|selectattr('evidence_id', 'in', p.evidence_ids)|list %}| {{ d.name }} | {% if p.status == 'verified' %}{% if d.market_level is none %}材料支持；市场等级待验证{% elif p.score < d.market_level %}能力差距（材料支持）{% else %}材料支持（达到或超过市场预期）{% endif %}{% elif p.status == 'partial' %}部分证据，等级或差距待验证{% elif p.status == 'confirmed_gap' %}已确认能力差距{% else %}未知／待验证{% endif %} | {% if p.score is none %}未定级{% else %}L{{ p.score }}{% endif %} | {{ p.rationale }}{% for ev in evs %}；{{ ev.source_excerpt_or_summary }}（材料：{{ ev.source_material_id }}；{% if ev.evidence_type == 'direct' %}直接证据{% elif ev.evidence_type == 'indirect' %}间接证据{% elif ev.evidence_type == 'self_report' %}用户自述{% else %}未知类型{% endif %}）{% endfor %} | {{ p.missing_evidence|join('；') if p.missing_evidence else '补充可回溯产出或结果以增强证据可信度' }} |
+{% endfor %}
+{% else %}
+未提供个人简历或其他个人材料，本次仅生成市场探索画像；不推断能力等级，也不将缺少材料描述为个人短板。
+{% endif %}
+
+## 5. 未来30天优先行动
+{% for a in report_content.actions %}
+### {{ loop.index }}. {{ a.why }}
+- 类型：{% if a.action_type == 'capability_gap' %}补能力{% elif a.action_type == 'evidence_gap' %}补举证{% elif a.action_type == 'market_research' %}补市场样本{% elif a.action_type == 'positioning' %}澄清目标{% else %}面试练习{% endif %}{% if a.capability_ids %}；关联能力：{% for cid in a.capability_ids %}{% set cap = market_model.dimensions|selectattr('id','equalto',cid)|first %}{{ cap.name }}（{{ cid }}）{% if not loop.last %}、{% endif %}{% endfor %}{% endif %}{% if a.evidence_ids %}；证据编号：{{ a.evidence_ids|join('、') }}{% endif %}
+- 任务：{{ a.task }}
+- 产出：{{ a.deliverable }}
+- 核验：{{ a.check }}
+- 周期：{{ a.period }}
+{% endfor %}
+
+{% if report_content.followup_questions %}
+### 待验证追问（逐轮询问，每轮一个主要问题）
+{% for q in report_content.followup_questions %}
+- {{ q }}
+{% endfor %}
+{% endif %}
+
+{% if revision_history is defined and revision_history %}
+### 判断修订记录
+{% for r in revision_history %}
+- 第 {{ r.revision }} 版（{{ r.revised_at }}）：原判断：{{ r.previous_assessment }}；新增材料：{{ r.new_material_ids|join('、') }}；修订理由：{{ r.change_reason }}。
+{% endfor %}
+{% endif %}
+
+## 来源登记
+{% for s in sources %}
+- **{{ s.id }}｜{{ s.organization }}｜{{ s.title }}**（{{ s.location }}，{{ s.published_at or '发布日期未明' }}；采集 {{ s.collected_at }}）：{% if synthetic %}合成虚构来源，原始演示记录（不对应真实岗位页）{% else %}[来源正文]({{ s.url }}){% endif %}。{{ s.description_summary }} 纳入状态：{% if s.eligibility == 'included' %}纳入本次范围{% elif s.eligibility == 'pending_review' %}待审阅{% elif s.eligibility == 'duplicate_candidate' %}重复候选{% else %}已排除{% endif %}；来源状态：{% if synthetic %}合成演示{% elif s.source_status == 'active' %}采集时可见招聘正文{% elif s.source_status == 'user_provided' %}用户提供，招聘活跃状态未独立核实{% elif s.source_status == 'expired' %}已过期{% elif s.source_status == 'unavailable' %}无法访问{% else %}未核实{% endif %}；来源限制：{{ s.exclusion_reason or ('仅用于演示结构与呈现。' if synthetic else '按来源正文摘要记录，需保留适用范围。') }}
+{% endfor %}

@@ -1,0 +1,43 @@
+{
+  "retrieval_context": "公开招聘页初始线索：一条企业级应用方向可作单条探索案例，两条平台/Agent岗位用于分类或排除示范。检索日见各记录。均不构成代表性市场样本，不用于合成评分。",
+  "sources": [
+    {
+      "id": "seed-huayu-20261011",
+      "url": "https://www.zhaopin.com/jobdetail/CC409922380J41025925902.htm",
+      "organization": "华宇元典信息服务有限公司",
+      "title": "AI Agent产品经理（J11103）",
+      "role_track": "B端/企业级AI应用（法律工作型Agent）",
+      "location": "北京",
+      "seniority": "3–5年，本科（岗位页摘要）",
+      "published_at": null,
+      "retrieved_at": "2026-10-11",
+      "summary": "岗位摘要涉及法律工作型Agent任务路线、文件上下文、权限与人工接管、产物验收、真实任务评测反馈、协同交付；要求本人可复盘Agent上线或真实试点案例。",
+      "limitations": "岗位页未显示发布日期；单条企业法律Agent岗位，仅供探索和后续扩样，不代表AI应用产品经理整体市场。"
+    },
+    {
+      "id": "seed-jd-20260302",
+      "url": "https://zhaopin.jd.com/web/job-info-detail?requementId=212557",
+      "organization": "京东",
+      "title": "AI Agent产品经理",
+      "location": "北京",
+      "seniority": "3–5年以上互联网经验，至少1年AI实战（据岗位页摘要）",
+      "published_at": "2026-03-02",
+      "retrieved_at": "2026-10-10",
+      "summary": "岗位摘要涉及平台编排、RAG与Tools边界、通用业务组件、Agent评估和线上追踪、调优成本及0到1协同交付。",
+      "role_track": "AI平台产品（排除于首发企业应用市场画像）",
+      "limitations": "平台方向分类/排除演示；不可混入首发B端AI应用画像。单条岗位也不能推断市场普遍要求。"
+    },
+    {
+      "id": "seed-meituan-20260920",
+      "url": "https://zhaopin.meituan.com/web/position/detail?highlightType=social&jobUnionId=4780465156",
+      "organization": "美团",
+      "title": "小团AI Agent产品经理",
+      "location": "北京",
+      "seniority": "3年以上（据岗位页摘要）",
+      "published_at": "2026-09-20",
+      "retrieved_at": "2026-10-10",
+      "summary": "岗位摘要覆盖从用户问题到结果的完整链路，模型、搜索、知识、Skill、MCP、Harness与Eval协作，线上根因定位及跨团队负责。",
+      "limitations": "单条岗位，地区与Agent方向集中；页面信息可能变化，不能据此推断市场普遍要求。"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<section id="dimensions" class="dimension-overview" aria-labelledby="dimensions-title">
+  <h2 id="dimensions-title">各维度的岗位要求、已有经历与差距</h2>
+  <div class="axis-overview-grid">
+    {% for a in radar.axes %}
+    <article class="axis-card" id="dimension-{{ a.id }}" data-axis-card="{{ a.id }}" aria-labelledby="dimension-title-{{ a.id }}">
+      <h3 id="dimension-title-{{ a.id }}"><span class="axis-number">{{ '%02d'|format(loop.index) }}</span>{{ a.label }}</h3>
+      <dl>
+        <div><dt>企业要什么</dt><dd>{{ a.explanation.requirement }}</dd></div>
+        <div><dt>你有什么</dt><dd>{{ a.explanation.experience }}</dd></div>
+        <div><dt>还差什么</dt><dd>{{ a.explanation.difference }}</dd></div>
+      </dl>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+<section class="focus-priorities" aria-labelledby="priorities-title">
+  <h2 id="priorities-title">现在最值得关注的事</h2>
+  <ol>{% for item in focus.priorities %}<li><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>{% endfor %}</ol>
+</section>

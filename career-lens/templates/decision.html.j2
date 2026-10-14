@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ p.title }} · Career Lens</title><style>{{ css|safe }}</style></head>
+<body{% if focus %} class="focus-report"{% endif %}>
+<a class="skip" href="#main">跳到正文</a>
+<header class="masthead"><span class="brand">CAREER LENS<span class="brand-dot" aria-hidden="true"></span></span><span>看懂岗位，找到自己的位置</span></header>
+<main id="main">
+<section class="opening{% if radar %} radar-opening{% endif %}{% if focus %} focus-opening{% endif %}" aria-labelledby="page-title">
+{% if radar %}{% include "radar.html.j2" %}{% else %}
+<div class="opening-copy">
+<p class="meta">{% if case.kind == 'synthetic' %}虚构案例 · 方法演练{% else %}你的职业判断{% endif %}{% if reader %} · {{ reader.updated_at }}{% else %} · {{ case.date }}{% endif %}</p>
+<h1 id="page-title">{{ p.title }}</h1>
+<p class="target">{{ case.target.label }}</p>
+<p class="lead">{{ judgments[p.main_judgment].statement }}</p>
+{% if not reader %}<p>{{ p.intro }}</p>{% endif %}
+</div>
+{% if reader %}<dl class="snapshot" aria-label="个人判断快照">{% for item in reader.snapshot %}<div><dt>{{ item.label }}</dt><dd>{{ item.text }}</dd></div>{% endfor %}</dl>{% endif %}
+{% endif %}
+</section>
+{% if focus %}{% include "axis-overview.html.j2" %}{% else %}
+<nav aria-label="阅读导航"><a href="{% if reader %}#market{% else %}#role{% endif %}">岗位怎么筛</a><a href="#personal">我的优势与差异</a><a href="#paths">接下来怎么选</a></nav>
+{% if reader %}
+<section id="market" aria-labelledby="market-title">
+<p class="section-number">01 / 岗位怎么筛</p><h2 id="market-title">岗位名称相近，门槛并不相同</h2>
+<p class="section-intro">{{ reader.market_intro }}</p>
+<div class="conditions">{% for item in reader.conditions %}<article class="condition"><div class="condition-title"><span class="condition-number">{{ '%02d'|format(loop.index) }}</span><h3>{{ item.title }}</h3></div><p class="requirement">{{ item.requirement }}</p><p><span class="inline-label">对你意味着</span>{{ item.meaning }}</p><p class="check"><span class="inline-label">读JD时检查</span>{{ item.check }}</p></article>{% endfor %}</div>
+<p class="boundary">按实际招聘条件比较，几种条件可能同时出现；这里只解释已核验材料，不代表全市场分类或当前在招清单。</p>
+</section>
+{% endif %}
+<section id="personal" aria-labelledby="personal-title">
+<p class="section-number">{% if reader %}02 / 看清自己{% else %}01 / 看清自己{% endif %}</p><h2 id="personal-title">{% if reader %}哪些是你的优势，哪些需要补？{% else %}你的经历，在哪些地方接得上？{% endif %}</h2>
+{% if reader %}
+<div class="insight"><h3>{{ reader.insight.title }}</h3><p>{{ reader.insight.text }}</p>{% for paragraph in reader.insight.paragraphs|default([]) %}<p>{{ paragraph }}</p>{% endfor %}</div>
+<div class="findings">{% for item in reader.findings %}<article class="finding finding-{{ item.status }}"><div class="finding-heading"><span class="status">{% if item.status == 'strength' %}已有优势{% elif item.status == 'expression' %}需要讲清{% elif item.status == 'experience' %}需要积累{% else %}目标差异{% endif %}</span><h3>{{ item.title }}</h3></div><dl><div><dt>你的经历</dt><dd>{{ item.fact }}</dd></div><div><dt>对照岗位</dt><dd>{{ item.meaning }}</dd></div></dl><p class="finding-next"><span class="inline-label">可以这样做</span>{{ item.next }}</p></article>{% endfor %}</div>
+{% else %}
+<p>{{ p.personal_intro }}</p><div class="comparison" role="table" aria-label="岗位责任与个人经历对照"><div class="comparison-head" role="row"><span role="columnheader">岗位责任</span><span role="columnheader">已有经历</span><span role="columnheader">当前差异</span></div>{% for row in p.comparison %}<div class="comparison-row" role="row"><div role="cell"><h3>{{ tasks[row.responsibility_ref].title }}</h3></div><div role="cell"><span class="mobile-label">已有经历</span>{{ row.experience }}</div><div role="cell"><span class="mobile-label">当前差异</span>{{ row.difference }}</div></div>{% endfor %}</div>
+{% endif %}
+<div id="role" class="role-explainer"><h3>这些要求，来自怎样的工作？</h3><p>{{ p.role_intro }}</p><ol class="role-flow" aria-label="岗位责任关系">{% for ref in p.responsibility_refs %}{% set task = tasks[ref] %}<li><span class="step">{{ '%02d'|format(loop.index) }}</span><b>{{ task.title }}</b><span>{{ task.question }}</span></li>{% endfor %}</ol><p class="boundary">责任关系示意，无评分；具体岗位可能只承担其中一部分。{{ case.target.applicability }}</p></div>
+</section>
+<section id="paths" aria-labelledby="paths-title">
+<p class="section-number">{% if reader %}03 / 比较路径{% else %}02 / 比较路径{% endif %}</p><h2 id="paths-title">不同选择，各需要什么投入？</h2>
+<div class="paths">{% for path in p.paths %}<article><p class="path-number">选择 {{ loop.index }}</p><h3>{{ path.title }}</h3><p>{{ path.fit }}</p><dl><dt>需要投入</dt><dd>{{ path.investment }}</dd><dt>要接受的取舍</dt><dd>{{ path.tradeoff }}</dd><dt>适合你的情况</dt><dd>{{ path.choose_when }}</dd>{% if reader %}<dt class="next-label">这条路的第一步</dt><dd class="path-step">{{ reader.path_steps[loop.index0] }}</dd>{% endif %}</dl></article>{% endfor %}</div>
+<p class="choice-note">{{ p.choice_note }}</p>
+{% if reader %}<aside class="next-step" aria-labelledby="next-step-title"><span class="section-number">先做一件小事</span><h3 id="next-step-title">{{ reader.next_step.title }}</h3><p>{{ reader.next_step.text }}</p></aside>{% endif %}
+</section>
+{% endif %}
+<div class="evidence-entry"><span>想核对这个判断？</span><a class="evidence-link" href="#judgment-{{ p.main_judgment }}">查看判断与资料依据 ↓</a></div>
+<details class="appendix" id="reasoning"><summary>附录 · 判断过程与原始资料</summary>
+<p class="boundary">判断基于：{{ case.date }} · 第 {{ case.revision }} 版。{{ judgments[p.main_judgment].scope }}。{% if reader %}这次呈现更新不代表新增市场采集。{% endif %}</p>
+{% if radar %}<details id="radar-audit"><summary>雷达刻度与逐轴依据</summary><p>两条线共用本轴的任务锚点。等级表示有顺序的责任层次，不是百分制、能力上限或录用概率。个人落点标明事实与推断；无评分处不补0，也不跨空缺连线。</p>{% for a in radar.axes %}<details id="radar-axis-{{ a.id }}"><summary>{{ a.label }} · 岗位{{ a.required_level }}／个人{% if a.personal_level is not none %}{{ a.personal_level }}{% else %}见说明{% endif %}</summary><p><b>岗位依据：</b>{{ a.required_reason }}</p><p><b>个人依据：</b>{{ a.personal_reason }}</p><p>{{ a.gap_note }}</p><p>个人落点：{% if a.basis == 'inferred' %}依据职责与项目描述的保守推断{% elif a.basis == 'observed' %}材料所述行为{% else %}不评级，保留已确认的事实与差异{% endif %}</p><ol>{% for anchor in a.anchors %}<li>{{ anchor }}</li>{% endfor %}</ol><ul>{% for sid in a.source_refs %}<li><a href="{{ sources[sid].url }}" target="_blank" rel="noopener noreferrer">{{ sources[sid].title }}</a> · {{ sources[sid].locator }}</li>{% endfor %}{% for eid in a.target_evidence_refs %}<li>目标：{{ evidence[eid].text }} · {{ evidence[eid].locator }}</li>{% endfor %}{% for eid in a.personal_evidence_refs %}<li>{{ evidence[eid].title }}：{{ evidence[eid].text }} · {{ evidence[eid].locator }}</li>{% endfor %}</ul></details>{% endfor %}</details>{% endif %}
+{% for j in case.judgments %}<details class="judgment" id="judgment-{{ j.id }}"><summary>{{ j.statement }}</summary><div class="detail-body"><p><b>适用范围：</b>{{ j.scope }}</p><p>{{ j.rationale }}</p><h3>用到的本人及目标材料</h3><ul>{% for eid in j.evidence_refs %}{% set e = evidence[eid] %}<li><b>{{ e.title }}</b>（{% if e.kind == 'target' %}目标岗位{% else %}个人材料{% endif %}）<p>{{ e.text }}</p><p class="meta">出处：{{ e.locator }}</p></li>{% endfor %}</ul><h3>其他可能解释</h3><ul>{% for text in j.alternatives %}<li>{{ text }}</li>{% endfor %}</ul><h3>哪些信息会改变判断</h3><ul>{% for text in j.change_conditions %}<li>{{ text }}</li>{% endfor %}</ul><h3>岗位责任依据</h3><ul>{% for rid in j.responsibility_refs %}<li>{{ tasks[rid].title }}：{% for sid in tasks[rid].source_refs %}<a href="{{ sources[sid].url }}" target="_blank" rel="noopener noreferrer">{{ sources[sid].title }}</a>{% if not loop.last %}、{% endif %}{% endfor %}</li>{% endfor %}</ul></div></details>{% endfor %}
+{% if reader %}<details><summary>岗位条件对照的来源</summary><ul>{% for condition in reader.conditions %}<li><b>{{ condition.title }}</b><p>{{ condition.requirement }}</p>{% for sid in condition.source_refs %}<p><a href="{{ sources[sid].url }}" target="_blank" rel="noopener noreferrer">{{ sources[sid].title }}</a> · {{ sources[sid].locator }} · {% if sources[sid].visibility == 'partial_description' %}部分可见正文{% else %}完整可读正文{% endif %}</p>{% endfor %}{% for eid in condition.evidence_refs %}<p>{{ evidence[eid].title }}：{{ evidence[eid].text }} · {{ evidence[eid].locator }}</p>{% endfor %}</li>{% endfor %}</ul></details>{% endif %}
+<details><summary>职责解释与经历例子</summary>{% for ref in p.responsibility_refs %}{% set task=tasks[ref] %}<h3>{{ task.title }}</h3><p>{{ task.observed }}</p><p>{{ task.mechanism }}</p><p><b>可以说明这项责任的经历：</b>{{ task.evidence_standard }}</p><p class="boundary">{{ task.scope }}。机制与举证例子是分析解释。</p>{% endfor %}</details>
+<details class="research"><summary>资料范围与知识版本</summary><p>{{ knowledge.scope }} · 版本 {{ knowledge.version }}</p><p>{{ knowledge.limitations }}</p><p>招聘资料按采集日期作为职责参照，不保证当前仍在招。</p><ul>{% for s in knowledge.sources %}<li><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer">{{ s.title }}</a> · {{ s.captured_at }}<p>{{ s.summary }}</p></li>{% endfor %}</ul></details>
+</details>
+<footer>Career Lens · {% if case.kind == 'synthetic' %}本页人物、个人经历及目标JD为虚构，仅用于方法与界面演练。{% else %}本人材料未作外部核验；本页用于职业理解与选择，不保证录用。{% endif %}</footer>
+</main>
+<script>{% if radar %}{{ radar_js|safe }}{% endif %}</script>
+<script>
+function revealJudgment(){const el=document.getElementById(location.hash.slice(1));if(!el)return;for(let parent=el;parent;parent=parent.parentElement){if(parent.tagName==='DETAILS')parent.open=true;}if(el.tagName==='DETAILS'){el.querySelector('summary').focus({preventScroll:true});}}
+addEventListener('hashchange',revealJudgment);revealJudgment();
+addEventListener('beforeprint',()=>document.querySelectorAll('details').forEach(d=>{d.dataset.wasOpen=d.open?'1':'0';d.open=true;}));
+addEventListener('afterprint',()=>document.querySelectorAll('details').forEach(d=>{d.open=d.dataset.wasOpen==='1';}));
+</script></body></html>

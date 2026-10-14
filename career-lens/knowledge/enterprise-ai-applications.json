@@ -1,0 +1,134 @@
+{
+  "id": "enterprise-ai-applications",
+  "version": "2026-10-11.v05.1",
+  "scope": "全国企业AI与Agent应用职责的有限解释；不覆盖模型平台、算法评测专岗或增长岗",
+  "maturity": "limited",
+  "limitations": "沿用2026-10-11核验语料：21个完整独立目标模板，另有部分可见材料。本包精选5个有明确责任的来源作机制解释，不增加样本计数；尚未通过深度全国画像门槛，不能推导全市场比例、趋势、能力权重或当前仍在招。未开展真实读者或独立判断验证。",
+  "sources": [
+    {
+      "id": "R015",
+      "title": "药明生物 · Agent AI Product Manager",
+      "url": "https://cn.linkedin.com/jobs/view/agent-ai-product-manager-at-wuxi-biologics-4414965608",
+      "captured_at": "2026-10-11",
+      "visibility": "full_description",
+      "locator": "正文L78–142",
+      "summary": "负责场景发现、原型、发布、采用和迭代；设计评估、判断生产门槛并追踪业务结果。",
+      "origin_channel": "linkedin",
+      "body_sha256": "287c63bc9c3f629fd24ad7574d46ed6432a57bfc808876b8a43c5ecc8b4dd33e"
+    },
+    {
+      "id": "R029",
+      "title": "百度 · 企业效能AI产品经理",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/645aeeb5-f2a7-4df3-b13c-d90a6006aac3",
+      "captured_at": "2026-10-11",
+      "visibility": "full_description",
+      "locator": "正文：工作职责与职责要求",
+      "summary": "识别企业工作流、开展沙盒实验、建设效果指标，并结合运营与反馈迭代；要求至少一个持续稳定产出的工作流或产品。",
+      "origin_channel": "official",
+      "body_sha256": "ea2ebbe603c9021a327e0c82f479e12d4e62bc1638b3f3efd1ae78f261af947f"
+    },
+    {
+      "id": "R001",
+      "title": "金赛药业 · AI产品经理",
+      "url": "https://www.zhaopin.com/jobdetail/CC000320460J40843590216.htm",
+      "captured_at": "2026-10-11",
+      "visibility": "partial_description",
+      "locator": "可见正文L43–111",
+      "summary": "可见职责包含场景优先级、规则/RAG/Agent方案选择、效果验证及上线后改进；可见任职条件要求至少一个正式上线AI项目。",
+      "origin_channel": "zhaopin",
+      "body_sha256": "e6d43d6cda048b92bae5b72a476ef1eee11da579626918f66cecbfe9e0d9030c"
+    },
+    {
+      "id": "R020",
+      "title": "太平洋电信 · AI/B端产品经理",
+      "url": "https://cn.linkedin.com/jobs/view/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88ai-b%E7%AB%AF%EF%BC%89-j10108-at-telstra-pbs-4465942633",
+      "captured_at": "2026-10-11",
+      "visibility": "full_description",
+      "locator": "正文L74",
+      "summary": "要求企业服务产品全周期经验；AI专项经历、效果评测和成本优化列为优先条件，不可据此推导所有岗位都以正式AI上线为硬门槛。",
+      "origin_channel": "liepin",
+      "body_sha256": "ed5311844e001fa345de78276bd8bd96c429e258f3cc1f7c405500b71136cad6"
+    },
+    {
+      "id": "R021",
+      "title": "金斯瑞 · AI for Industry产品经理",
+      "url": "https://cn.linkedin.com/jobs/view/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86-ai-for-industry-at-%E5%8D%97%E4%BA%AC%E9%87%91%E6%96%AF%E7%91%9E%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-4474803612",
+      "captured_at": "2026-10-11",
+      "visibility": "full_description",
+      "locator": "正文L45",
+      "summary": "要求抽象跨业务共性、兼顾标准化与定制化，并控制多客户实施成本。",
+      "origin_channel": "liepin",
+      "body_sha256": "6585dd82675326a7b6fb7189cbc001988be3ca5d5cea8f07e5478d64318a6f2e"
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "D1",
+      "title": "选对业务问题",
+      "question": "为什么值得做，成功后谁的工作会改变？",
+      "observed": "岗位要求深入流程、识别场景并定义可衡量结果。",
+      "mechanism": "如果没有原流程成本与使用条件，功能即使能运行，也难说明为什么值得投入。产品经理需要决定先解决哪个问题。",
+      "evidence_standard": "说明一次任务选择：原流程、用户痛点、数据条件、放弃的需求，以及选择理由。",
+      "scope": "适用于承担场景发现与需求优先级的应用岗",
+      "source_refs": [
+        "R015",
+        "R001",
+        "R029"
+      ]
+    },
+    {
+      "id": "D2",
+      "title": "决定AI的边界",
+      "question": "哪些步骤由模型承担，哪些由规则或人完成？",
+      "observed": "可见职责明确要求比较实现方式，设计权限、人工确认及异常处理。",
+      "mechanism": "自主性越大，错误可能影响的业务步骤越多。理解技术边界的价值在于作出方案取舍，而不只是说出框架名称。",
+      "evidence_standard": "用一个任务解释为什么选择规则、检索、模型或Agent，在哪里让人确认，失败后如何恢复。",
+      "scope": "适用于需要设计具体工作流与业务系统集成的应用岗",
+      "source_refs": [
+        "R001",
+        "R015"
+      ]
+    },
+    {
+      "id": "D3",
+      "title": "判断结果是否可用",
+      "question": "怎样发现“看起来不错，实际不能用”的输出？",
+      "observed": "岗位要求设计评估、识别失败模式，并决定生产可用门槛。",
+      "mechanism": "演示通常只覆盖顺利路径。可用性判断需要把错误放进业务后果中，区分必须阻止的问题和可以人工处理的问题。",
+      "evidence_standard": "展示测试样本、业务达标标准、失败分类与一次据此改变方案的决定。",
+      "scope": "评估设计能在上线前发生；没有正式上线不代表不会评估",
+      "source_refs": [
+        "R015",
+        "R001",
+        "R029"
+      ]
+    },
+    {
+      "id": "D4",
+      "title": "根据真实使用改进",
+      "question": "用户做完工作之后，是否还愿意继续用？",
+      "observed": "岗位要求跟踪采用、任务完成、反馈与业务效率，并持续改进。",
+      "mechanism": "生成速度提高不一定减少整项工作的时间。人工核验、返工和使用障碍会影响价值；使用证据帮助决定继续、缩小或停止。",
+      "evidence_standard": "说明真实用户如何使用、失败与修改在哪里、自己做了什么调整，以及调整后的任务结果。",
+      "scope": "小范围试用和正式生产、规模化运营是不同阶段，不能互相替代",
+      "source_refs": [
+        "R015",
+        "R029",
+        "R001"
+      ]
+    },
+    {
+      "id": "D5",
+      "title": "控制重复交付成本",
+      "question": "换一个部门或客户，哪些可以复用？",
+      "observed": "部分企业产品职责强调共性抽象、配置复用与实施成本。",
+      "mechanism": "一次定制项目有效，不自动证明可销售或可复制。需要知道哪些依赖可以产品化、哪些差异仍需重新设计。",
+      "evidence_standard": "对照两个部门或客户，记录共享流程、配置差异、额外维护成本及验收结果。",
+      "scope": "主要适用于多客户或跨部门产品化责任，并非所有应用岗同等要求",
+      "source_refs": [
+        "R021",
+        "R020"
+      ]
+    }
+  ]
+}

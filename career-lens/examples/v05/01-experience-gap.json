@@ -1,0 +1,449 @@
+{
+  "knowledge": {
+    "id": "enterprise-ai-applications",
+    "version": "2026-10-11.v05.1"
+  },
+  "date": "2026-10-11",
+  "revision": 1,
+  "case_id": "fictional-a",
+  "kind": "synthetic",
+  "target": {
+    "label": "企业AI应用产品经理，负责正式交付与使用后迭代（虚构目标）",
+    "precision": "posting",
+    "applicability": "目标JD为虚构练习，岗位知识只解释相关责任，不代表真实在招机会。"
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "personal",
+      "title": "企业流程交付",
+      "text": "主导两个流程产品正式交付，负责需求与实施；有用户反馈迭代。",
+      "locator": "虚构材料A／简历第1段"
+    },
+    {
+      "id": "E2",
+      "kind": "personal",
+      "title": "AI实践阶段",
+      "text": "独立做过资料检索Demo与离线测试，尚未进入真实用户使用。",
+      "locator": "虚构材料A／项目说明"
+    },
+    {
+      "id": "T1",
+      "kind": "target",
+      "title": "目标JD",
+      "text": "要求亲自负责AI应用从验证到正式交付及使用后迭代，并能展示一次真实使用驱动的调整。",
+      "locator": "虚构目标A／职责及条件"
+    }
+  ],
+  "judgments": [
+    {
+      "id": "J1",
+      "statement": "企业交付基础可以迁移；对于要求正式AI交付与使用后迭代的目标，当前缺的是这段经历。",
+      "scope": "承担企业AI应用方案、验证与使用改进的岗位",
+      "finding_kind": "experience_gap",
+      "responsibility_refs": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "evidence_refs": [
+        "E1",
+        "E2",
+        "T1"
+      ],
+      "rationale": "传统交付支撑业务与推进基础，离线测试说明已经开始验证AI方案。但材料明确尚无真实使用，不能靠项目包装补出目标要求的这一阶段。",
+      "alternatives": [
+        "尚未展示的离线评估细节可能改善验证能力的表达，但不能替代真实使用经历。"
+      ],
+      "change_conditions": [
+        "若出现本人负责的正式AI交付和使用迭代记录，重新判断是否仍有阶段性缺口。"
+      ]
+    },
+    {
+      "id": "J2",
+      "statement": "也可以先选择认可企业产品经验、允许逐步积累AI专项经历的岗位。",
+      "scope": "承担企业AI应用方案、验证与使用改进的岗位",
+      "finding_kind": "strength",
+      "responsibility_refs": [
+        "D1",
+        "D5"
+      ],
+      "evidence_refs": [
+        "E1",
+        "E2"
+      ],
+      "rationale": "不同职责组合的门槛不同；企业交付资产适合用来筛选接受相关背景的岗位。太平洋电信参照说明AI专项经历存在优先项形式，不能据此保证某个职位一定适合。",
+      "alternatives": [
+        "若实际JD把正式AI交付设为硬要求，这条路径仍需先补对应经历。"
+      ],
+      "change_conditions": [
+        "具体JD出现新的硬条件时重新筛选。"
+      ]
+    }
+  ],
+  "presentation": {
+    "title": "缺的是一段真实使用经历，不需要推倒已有经验",
+    "main_judgment": "J1",
+    "intro": "你已经会推进企业产品，也做过AI验证。现在需要区分：离线证明能运行，与在用户工作中承担结果，是两段不同经历。是否投入补齐，取决于你是否继续追求这一类责任。",
+    "role_intro": "这个目标同时要求方案、验证与使用后的改进。技术理解需要变成取舍，交付之后也要回答用户是否获得价值。",
+    "personal_intro": "已有企业产品交付是可迁移资产；AI项目仍停在Demo与离线测试，因此差异集中在真实使用阶段。",
+    "comparison": [
+      {
+        "responsibility_ref": "D1",
+        "experience": "主导企业流程交付。",
+        "difference": "业务与推进基础能够迁移，需要用具体任务说明。",
+        "judgment_ref": "J1"
+      },
+      {
+        "responsibility_ref": "D3",
+        "experience": "已做资料检索Demo和离线测试。",
+        "difference": "可以展示验证判断，不能直接推断不会评估。",
+        "judgment_ref": "J1"
+      },
+      {
+        "responsibility_ref": "D4",
+        "experience": "尚无真实用户使用。",
+        "difference": "目标所要求的使用后改进经历确实缺少。",
+        "judgment_ref": "J1"
+      }
+    ],
+    "paths": [
+      {
+        "title": "继续争取当前目标",
+        "fit": "保留企业交付优势，补目标需要的AI使用阶段。",
+        "investment": "找到能跟进真实使用的任务，记录达标标准、失败、调整及结果。",
+        "tradeoff": "需要实际用户与推进条件；小试用仍不等于全部正式或规模运营责任。",
+        "choose_when": "你愿意承担这类结果责任，而且能获得真实任务入口。",
+        "judgment_refs": [
+          "J1"
+        ]
+      },
+      {
+        "title": "先找能发挥企业产品经验的岗位",
+        "fit": "按实际条件筛选AI经历为优先项、认可企业交付背景的职位。",
+        "investment": "整理本人需求取舍与交付结果，并核对每份JD的AI门槛。",
+        "tradeoff": "可能暂时减少对生产AI专项责任的承担；不能只按职位名投递。",
+        "choose_when": "当前更需要发挥既有经验，或暂时没有积累正式AI交付的条件。",
+        "judgment_refs": [
+          "J2"
+        ]
+      }
+    ],
+    "choice_note": "这两条路都成立。先确认想承担的责任，再决定是补一段经历，还是调整当前求职范围。",
+    "responsibility_refs": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "reader": {
+      "updated_at": "2026-10-12",
+      "snapshot": [
+        {
+          "label": "已有基础",
+          "text": "企业流程交付与离线AI测试。",
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "label": "关键差异",
+          "text": "尚无真实用户使用，目标要求正式AI交付。",
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "label": "现在先看",
+          "text": "上线是否硬门槛，再决定补经历或调整投递。",
+          "judgment_refs": [
+            "J1",
+            "J2"
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "title": "认可企业交付背景",
+          "requirement": "AI专项经历可能列为优先项。",
+          "meaning": "传统交付经验值得呈现，不应因没有正式AI上线而排除所有岗位。",
+          "check": "确认AI经历是硬要求还是优先项，并检查其他任职条件。",
+          "source_refs": [
+            "R020"
+          ],
+          "evidence_refs": [],
+          "judgment_refs": [
+            "J2"
+          ]
+        },
+        {
+          "title": "要求正式AI交付",
+          "requirement": "虚构目标明确要求正式交付与使用后调整。",
+          "meaning": "当前Demo和离线测试不足以支撑这项条件。",
+          "check": "读清“负责上线”与“曾负责上线”的区别，结合任职条件判断。",
+          "source_refs": [],
+          "evidence_refs": [
+            "T1"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        }
+      ],
+      "insight": {
+        "title": "会做验证，和承担真实使用，是两段经历",
+        "text": "离线测试能说明你如何发现方案问题。真实使用还会带来用户返工、核验和采用障碍，负责人需要根据这些事实继续调整。你的企业交付基础仍然有用，目标新增的是AI任务的使用阶段。",
+        "judgment_refs": [
+          "J1"
+        ]
+      },
+      "findings": [
+        {
+          "status": "strength",
+          "title": "企业交付基础可以迁移",
+          "fact": "主导过企业流程交付，负责需求、实施和反馈。",
+          "meaning": "支持业务理解与推进，不等于已经完成AI交付。",
+          "next": "准备一个本人需求取舍与交付结果的案例。",
+          "judgment_refs": [
+            "J2"
+          ]
+        },
+        {
+          "status": "experience",
+          "title": "补的是使用阶段",
+          "fact": "AI项目目前为Demo和离线测试，没有真实用户使用。",
+          "meaning": "目标要求正式AI交付和使用后改进，存在阶段差异。",
+          "next": "先争取可跟进用户的任务，按真实阶段记录结果。",
+          "judgment_refs": [
+            "J1"
+          ]
+        }
+      ],
+      "path_steps": [
+        "选择能接触用户的现有任务，先确认可用标准与跟进条件。",
+        "拿几份具体JD核对AI硬条件，再用企业交付案例说明相关基础。"
+      ],
+      "next_step": {
+        "title": "先判断你投的岗位是否真的需要这段经历",
+        "text": "选几份具体JD，标出正式AI上线是任职硬条件、职责方向，还是优先项。再决定哪些立即投、哪些需要先补经历。",
+        "judgment_refs": [
+          "J1",
+          "J2"
+        ]
+      },
+      "market_intro": "先看岗位实际要求，再看自己的经历对应哪一段。下面是招聘条件的差异，不是按职位名称分高低；同一个岗位也可能同时包含多种条件。"
+    },
+    "radar": {
+      "title": "岗位要求与你的经历对照",
+      "scope": "已核验企业AI应用职责的任务参照，含跨场景产品化扩展责任；是分析标尺，不是全国平均分或具体JD的统一门槛。 本例目标JD明确要求交付与使用；复用为扩展参照。",
+      "description": "虚构候选人已有业务和离线AI实践；正式交付、使用迭代缺经历；AI复制结果未描述。",
+      "default_axis": "A4",
+      "scale_id": "task-responsibility-5-v1",
+      "axes": [
+        {
+          "id": "A1",
+          "label": "业务洞察",
+          "label_lines": [
+            "业务洞察"
+          ],
+          "task_ref": "D1",
+          "anchors": [
+            "能解释业务问题",
+            "参与需求调研或局部分析",
+            "独立定义业务问题与需求",
+            "主导复杂业务取舍与验证",
+            "跨业务沉淀问题选择方法"
+          ],
+          "required_level": 3,
+          "personal_level": 3,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "已核验职责要求识别高价值流程并把模糊问题转成需求和成功指标，以独立完成任务定义作为3级参照。",
+          "personal_reason": "虚构材料：主导企业需求与交付。",
+          "gap_note": "企业基础可迁移。",
+          "source_refs": [
+            "R015",
+            "R029"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E1"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A2",
+          "label": "AI方案设计",
+          "label_lines": [
+            "AI方案",
+            "设计"
+          ],
+          "task_ref": "D2",
+          "anchors": [
+            "能解释AI方案原理",
+            "参与方案或完成局部配置",
+            "独立设计AI任务方案与边界",
+            "主导复杂系统与异常方案取舍",
+            "跨项目建立方案设计方法"
+          ],
+          "required_level": 3,
+          "personal_level": 2,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "职责要求与工程团队共同确定工作流、数据、权限及人工确认，按独立方案设计的3级取保守参照，不因有架构一词直接判4级。",
+          "personal_reason": "虚构材料：资料检索Demo与离线实践，未展开完整方案取舍。",
+          "gap_note": "展示已有设计过程。",
+          "source_refs": [
+            "R015",
+            "R001"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A3",
+          "label": "效果评估",
+          "label_lines": [
+            "效果",
+            "评估"
+          ],
+          "task_ref": "D3",
+          "anchors": [
+            "能解释效果标准",
+            "已有测试或局部验证实践",
+            "独立定义样本、标准与评估决定",
+            "主导复杂失败分析与生产门槛",
+            "跨产品建立稳定评估方法"
+          ],
+          "required_level": 3,
+          "personal_level": 2,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "职责要求设计评估、识别失败并决定可用门槛，以独立评估决定为3级参照；不把JD出现次数作为分值。",
+          "personal_reason": "虚构材料明确有离线测试，未展开独立验收决定。",
+          "gap_note": "已有测试实践，不重复当作完全不会评估。",
+          "source_refs": [
+            "R015",
+            "R001"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A4",
+          "label": "应用交付",
+          "label_lines": [
+            "应用交付"
+          ],
+          "task_ref": "D4",
+          "anchors": [
+            "能解释应用交付步骤",
+            "推进内部试用或局部交付准备",
+            "独立承担正式AI任务交付",
+            "主导复杂生产交付与异常处理",
+            "跨项目建立AI交付方法"
+          ],
+          "required_level": 3,
+          "personal_level": null,
+          "status": "experience_gap",
+          "basis": "unrated",
+          "required_reason": "端到端应用职责包括发布；结合正式上线条件，采用独立正式AI任务交付的3级参照。具体JD仍可能只要求核心参与。",
+          "personal_reason": "虚构材料明确尚未进入真实用户使用。",
+          "gap_note": "缺目标要求的正式AI交付阶段，不把缺经历换算成1分。",
+          "source_refs": [
+            "R015",
+            "R001"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A5",
+          "label": "使用迭代",
+          "label_lines": [
+            "使用",
+            "迭代"
+          ],
+          "task_ref": "D4",
+          "anchors": [
+            "能解释采用与反馈问题",
+            "参与用户反馈或局部改进",
+            "独立跟进AI使用结果与迭代",
+            "主导跨团队采用及复杂运营改进",
+            "跨场景建立持续改进体系"
+          ],
+          "required_level": 3,
+          "personal_level": null,
+          "status": "experience_gap",
+          "basis": "unrated",
+          "required_reason": "职责要求跟踪采用、任务完成和使用反馈，持续改进；采用独立使用结果责任的3级参照。",
+          "personal_reason": "虚构材料明确无真实使用，因此缺该任务使用迭代经历。",
+          "gap_note": "需要真实任务入口。",
+          "source_refs": [
+            "R015",
+            "R029"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A6",
+          "label": "产品化复用",
+          "label_lines": [
+            "产品化",
+            "复用"
+          ],
+          "task_ref": "D5",
+          "anchors": [
+            "能解释复用的价值",
+            "已做共性能力设计或局部配置",
+            "验证跨场景复用与交付成本",
+            "主导标准化与定制化的复杂取舍",
+            "跨产品建立复用与交付体系"
+          ],
+          "required_level": 4,
+          "personal_level": null,
+          "status": "information_gap",
+          "basis": "unrated",
+          "required_reason": "跨场景产品化职责要求平衡标准化与定制化并控制多行业实施成本，归为复杂复用取舍的4级参照。这是扩展责任，不是每个应用岗的门槛。",
+          "personal_reason": "虚构材料未描述AI多场景复用。",
+          "gap_note": "复用是扩展责任，按具体JD决定是否要补。",
+          "source_refs": [
+            "R021"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E1",
+            "E2"
+          ],
+          "judgment_refs": [
+            "J2"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "case_id": "real-exploration-enterprise-ai-agent-20261011",
+  "synthetic": false,
+  "intake": {
+    "target": {
+      "role": "AI应用产品经理",
+      "role_track": "ai_agent_application_pm",
+      "location": "北京",
+      "experience_years": 5,
+      "seniority": "3–8年经验优先",
+      "sub_role": "B端/企业级法律工作Agent应用",
+      "as_of": "2026-10-11",
+      "scope_note": "仅用一条公开JD做探索画像；不代表完整AI应用产品经理市场。",
+      "salary_expectation": null,
+      "job_search_state": null
+    },
+    "prior_belief_status": "skipped",
+    "prior_beliefs": [],
+    "provided_jd_ids": [
+      "JD-HUAYU-001"
+    ],
+    "candidate_material_ids": []
+  },
+  "sources": [
+    {
+      "id": "JD-HUAYU-001",
+      "organization": "华宇元典信息服务有限公司",
+      "title": "AI Agent产品经理（J11103）",
+      "role_track": "ai_agent_application_pm",
+      "location": "北京",
+      "seniority": "3–5年，本科（岗位页摘要）",
+      "collected_at": "2026-10-11",
+      "published_at": null,
+      "url": "https://www.zhaopin.com/jobdetail/CC409922380J41025925902.htm",
+      "description_summary": "企业法律工作型Agent应用：围绕法律任务与文件上下文设计执行流程、权限与人工接管、产物验收和真实任务评测反馈，并协同交付；要求能复盘本人Agent上线或真实试点案例。",
+      "responsibilities": [
+        "法律工作型Agent应用场景与任务流程",
+        "文件上下文、权限与人工接管设计",
+        "产物验收、真实任务评测反馈与跨团队交付"
+      ],
+      "requirements": [
+        "具备本人Agent上线或真实试点的可复盘案例"
+      ],
+      "source_status": "active",
+      "eligibility": "included",
+      "exclusion_reason": null,
+      "dedupe_fingerprint": "huayu-j11103-cc409922380j41025925902"
+    }
+  ],
+  "market_model": {
+    "role_track": "ai_agent_application_pm",
+    "seniority_scope": "岗位页注明3–5年",
+    "geography": "北京",
+    "date_window": "页面发布日期未明；于2026-10-11查看",
+    "generated_at": "2026-10-11",
+    "eligible_jd_count": 1,
+    "sampling_method": "人工读取单条公开岗位页并按企业级法律Agent应用分类",
+    "sources": [
+      "JD-HUAYU-001"
+    ],
+    "sample_limitations": [
+      "仅1条公开JD，未达到方案建议的15–20条有效样本；雇主、地区、子方向均单一。只能形成探索性能力树，不能据此给市场等级或代表全市场。",
+      "岗位页未显示发布日期；状态可能变化；摘要保留核心职责而非全文。"
+    ],
+    "market_confidence": "exploratory_only",
+    "hard_filters": [],
+    "dimensions": [
+      {
+        "id": "business_task",
+        "name": "业务任务与场景拆解",
+        "subskills": [
+          "法律工作场景",
+          "端到端任务边界"
+        ],
+        "importance": "unresolved",
+        "role_tasks": [
+          "梳理法律工作型Agent场景与任务执行链路"
+        ],
+        "supporting_sources": [
+          "JD-HUAYU-001"
+        ],
+        "market_level": null,
+        "level_rationale": "单条岗位描述支持将其列为本岗位任务，不足以判断市场熟练度等级或普遍重要性。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "能描述概念，尚无法独立完成任务。"
+          },
+          {
+            "level": 2,
+            "behavior": "能在指导下完成典型任务并识别常见限制。"
+          },
+          {
+            "level": 3,
+            "behavior": "能独立完成常规任务，说明关键选择并处理常见问题。"
+          },
+          {
+            "level": 4,
+            "behavior": "能主导复杂任务，设计评估方法并基于证据优化。"
+          },
+          {
+            "level": 5,
+            "behavior": "能建立跨项目方法，处理高度复杂问题并指导他人。"
+          }
+        ]
+      },
+      {
+        "id": "context_permission",
+        "name": "上下文、权限与人工接管",
+        "subskills": [
+          "文件上下文",
+          "权限边界",
+          "人工接管"
+        ],
+        "importance": "unresolved",
+        "role_tasks": [
+          "设计文件上下文使用、权限控制与人工接管点"
+        ],
+        "supporting_sources": [
+          "JD-HUAYU-001"
+        ],
+        "market_level": null,
+        "level_rationale": "该职责来自一条特定法律Agent岗位，不推及其他应用场景。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "能描述概念，尚无法独立完成任务。"
+          },
+          {
+            "level": 2,
+            "behavior": "能在指导下完成典型任务并识别常见限制。"
+          },
+          {
+            "level": 3,
+            "behavior": "能独立完成常规任务，说明关键选择并处理常见问题。"
+          },
+          {
+            "level": 4,
+            "behavior": "能主导复杂任务，设计评估方法并基于证据优化。"
+          },
+          {
+            "level": 5,
+            "behavior": "能建立跨项目方法，处理高度复杂问题并指导他人。"
+          }
+        ]
+      },
+      {
+        "id": "artifact_acceptance",
+        "name": "产物验收与质量标准",
+        "subskills": [
+          "交付产物定义",
+          "验收标准"
+        ],
+        "importance": "unresolved",
+        "role_tasks": [
+          "定义工作型Agent产物如何验收"
+        ],
+        "supporting_sources": [
+          "JD-HUAYU-001"
+        ],
+        "market_level": null,
+        "level_rationale": "岗位页提及产物验收；无多样本证据支撑等级。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "能描述概念，尚无法独立完成任务。"
+          },
+          {
+            "level": 2,
+            "behavior": "能在指导下完成典型任务并识别常见限制。"
+          },
+          {
+            "level": 3,
+            "behavior": "能独立完成常规任务，说明关键选择并处理常见问题。"
+          },
+          {
+            "level": 4,
+            "behavior": "能主导复杂任务，设计评估方法并基于证据优化。"
+          },
+          {
+            "level": 5,
+            "behavior": "能建立跨项目方法，处理高度复杂问题并指导他人。"
+          }
+        ]
+      },
+      {
+        "id": "real_task_eval",
+        "name": "真实任务评测与反馈",
+        "subskills": [
+          "真实任务样本",
+          "反馈闭环"
+        ],
+        "importance": "unresolved",
+        "role_tasks": [
+          "组织真实任务评测并将反馈用于迭代"
+        ],
+        "supporting_sources": [
+          "JD-HUAYU-001"
+        ],
+        "market_level": null,
+        "level_rationale": "岗位页要求真实任务评测反馈；单条招聘信息不足以形成市场等级。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "能描述概念，尚无法独立完成任务。"
+          },
+          {
+            "level": 2,
+            "behavior": "能在指导下完成典型任务并识别常见限制。"
+          },
+          {
+            "level": 3,
+            "behavior": "能独立完成常规任务，说明关键选择并处理常见问题。"
+          },
+          {
+            "level": 4,
+            "behavior": "能主导复杂任务，设计评估方法并基于证据优化。"
+          },
+          {
+            "level": 5,
+            "behavior": "能建立跨项目方法，处理高度复杂问题并指导他人。"
+          }
+        ]
+      },
+      {
+        "id": "agent_delivery",
+        "name": "Agent试点与上线交付",
+        "subskills": [
+          "试点设计",
+          "上线复盘"
+        ],
+        "importance": "unresolved",
+        "role_tasks": [
+          "推进Agent真实试点或上线，并复盘本人负责的工作"
+        ],
+        "supporting_sources": [
+          "JD-HUAYU-001"
+        ],
+        "market_level": null,
+        "level_rationale": "岗位要求本人可复盘上线或真实试点案例；岗位样本过少，无法判断其普遍硬门槛。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "能描述概念，尚无法独立完成任务。"
+          },
+          {
+            "level": 2,
+            "behavior": "能在指导下完成典型任务并识别常见限制。"
+          },
+          {
+            "level": 3,
+            "behavior": "能独立完成常规任务，说明关键选择并处理常见问题。"
+          },
+          {
+            "level": 4,
+            "behavior": "能主导复杂任务，设计评估方法并基于证据优化。"
+          },
+          {
+            "level": 5,
+            "behavior": "能建立跨项目方法，处理高度复杂问题并指导他人。"
+          }
+        ]
+      },
+      {
+        "id": "cross_functional",
+        "name": "跨团队协同交付",
+        "subskills": [
+          "产品研发协同",
+          "交付推进"
+        ],
+        "importance": "unresolved",
+        "role_tasks": [
+          "协同相关团队推进交付"
+        ],
+        "supporting_sources": [
+          "JD-HUAYU-001"
+        ],
+        "market_level": null,
+        "level_rationale": "单条岗位摘要提及协同交付；覆盖度与级别要求未知。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "能描述概念，尚无法独立完成任务。"
+          },
+          {
+            "level": 2,
+            "behavior": "能在指导下完成典型任务并识别常见限制。"
+          },
+          {
+            "level": 3,
+            "behavior": "能独立完成常规任务，说明关键选择并处理常见问题。"
+          },
+          {
+            "level": 4,
+            "behavior": "能主导复杂任务，设计评估方法并基于证据优化。"
+          },
+          {
+            "level": 5,
+            "behavior": "能建立跨项目方法，处理高度复杂问题并指导他人。"
+          }
+        ]
+      }
+    ],
+    "candidate_jd_count": 1,
+    "quality_review": {
+      "approved_for_rating": false,
+      "rationale": "仅单条北京法律Agent岗位，覆盖单一雇主、地区和子方向；当前只支持探索画像，不能形成市场熟练度等级。"
+    }
+  },
+  "candidate_evidence": {
+    "candidate_id": "none",
+    "materials": [],
+    "evidence": [],
+    "assessments": []
+  },
+  "beliefs": [],
+  "report_content": {
+    "three_conclusions": [
+      "这条企业法律Agent岗位强调真实任务链路中的上下文、权限、接管和产物验收。",
+      "岗位还要求真实任务评测反馈及本人Agent上线或试点的复盘经历。",
+      "只有一个北京法律Agent岗位样本，无法判断上述要求在AI应用产品市场中的普遍等级或排序。"
+    ],
+    "actions": [
+      {
+        "why": "先判断该岗位画像能否推广到目标市场。",
+        "task": "再收集同地区、3–8年、B端AI应用产品岗位JD，按应用与平台/算法方向分类并去重。",
+        "deliverable": "来源可回溯的候选与有效JD登记表。",
+        "check": "记录纳入/排除原因，争取达到15–20条有效样本后再评市场等级。",
+        "period": "未来30天",
+        "action_type": "market_research",
+        "capability_ids": [],
+        "evidence_ids": []
+      },
+      {
+        "why": "补齐地区、职级和企业应用子方向的覆盖。",
+        "task": "继续收集同类B端AI应用产品岗位，记录样本状态和排除原因。",
+        "deliverable": "15–20条目标样本的筛选台账。",
+        "check": "每条来源可打开、日期可追溯，且应用与平台方向分开。",
+        "period": "未来30天",
+        "action_type": "market_research",
+        "capability_ids": [],
+        "evidence_ids": []
+      }
+    ],
+    "followup_questions": [
+      "你的目标更接近法律工作型Agent应用，还是其他企业业务AI应用？想确认：后续样本应按哪个子方向筛选。",
+      "你是否有可公开或脱敏的同类岗位JD？想确认：能否扩大市场样本并提高画像覆盖。"
+    ]
+  },
+  "workflow_state": "DELIVERED",
+  "revision_history": []
+}

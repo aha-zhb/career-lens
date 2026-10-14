@@ -1,0 +1,27 @@
+<div class="radar-heading">
+  <p class="meta">{% if case.kind == 'synthetic' %}虚构案例 · 方法演练{% else %}你的职业报告{% endif %} · {{ reader.updated_at if reader else case.date }}</p>
+  <h1 id="page-title">{{ radar.title }}</h1>
+  <p class="target">{{ case.target.label }}</p>
+  <p class="focus-summary">{{ focus.summary.text }}</p>
+</div>
+<figure class="radar-panel" aria-label="岗位要求与个人经历雷达对照">
+  <div class="radar-legend"><span class="target-legend">企业岗位要求</span><span class="personal-legend">你的经历与水平</span></div>
+  <div class="radar-plot"><svg class="career-radar" role="img" aria-label="{{ radar.description }}"></svg></div>
+  <figcaption>越靠外，承担的工作越完整。点选维度，查看具体差异；没有落点的维度见文字说明。</figcaption>
+  <div class="radar-axis-controls" role="group" aria-label="查看各维度的要求与差距">
+    {% for a in radar.axes %}<button type="button" data-axis="{{ a.id }}" aria-pressed="{{ 'true' if a.id == radar.default_axis else 'false' }}" aria-controls="radar-detail">{{ a.label }}</button>{% endfor %}
+  </div>
+  <script type="application/json" class="radar-data">{{ radar|tojson }}</script>
+  <noscript><style>.focus-report .dimension-overview{display:block}.focus-report .axis-explanation,.focus-report .radar-axis-controls{display:none}</style><p>图表交互未启用，下方显示所有维度的完整解释。</p></noscript>
+</figure>
+{% set axis = radar.axes|selectattr('id', 'equalto', radar.default_axis)|first %}
+<article class="radar-detail axis-explanation" id="radar-detail" aria-live="polite" aria-atomic="true">
+  <p class="detail-eyebrow">正在查看</p><h2>{{ axis.label }}</h2>
+  <dl>
+    <div><dt>企业要什么</dt><dd class="axis-requirement">{{ axis.explanation.requirement }}</dd></div>
+    <div><dt>你有什么</dt><dd class="axis-experience">{{ axis.explanation.experience }}</dd></div>
+    <div><dt>还差什么</dt><dd class="axis-difference">{{ axis.explanation.difference }}</dd></div>
+  </dl>
+  <a class="radar-audit-link" href="#radar-axis-{{ axis.id }}">查看本维度依据</a>
+</article>
+<p class="focus-research-note">{{ focus.research_note }}</p>

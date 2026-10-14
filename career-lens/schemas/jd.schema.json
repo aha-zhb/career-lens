@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://career-lens.local/schemas/jd.schema.json",
+  "title": "Normalized job description evidence",
+  "type": "object",
+  "required": [
+    "id",
+    "organization",
+    "title",
+    "role_track",
+    "location",
+    "seniority",
+    "collected_at",
+    "url",
+    "description_summary",
+    "source_status",
+    "dedupe_fingerprint"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "organization": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "role_track": {
+      "enum": [
+        "ai_application_pm",
+        "ai_agent_application_pm",
+        "ai_platform_pm",
+        "ai_model_evaluation_pm",
+        "ai_growth_pm",
+        "other",
+        "uncertain"
+      ]
+    },
+    "location": {
+      "type": "string"
+    },
+    "seniority": {
+      "type": "string"
+    },
+    "collected_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "description_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "responsibilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_status": {
+      "enum": [
+        "active",
+        "expired",
+        "user_provided",
+        "unavailable",
+        "unknown"
+      ]
+    },
+    "source_status_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "eligibility": {
+      "enum": [
+        "included",
+        "excluded_platform",
+        "excluded_other_track",
+        "excluded_expired",
+        "duplicate_candidate",
+        "pending_review"
+      ]
+    },
+    "exclusion_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dedupe_fingerprint": {
+      "type": "string",
+      "minLength": 8
+    },
+    "source_kind": {
+      "enum": [
+        "job",
+        "practice"
+      ]
+    },
+    "source_layer": {
+      "enum": [
+        "target_market",
+        "role_benchmark",
+        "work_practice"
+      ]
+    },
+    "body_access": {
+      "enum": [
+        "full",
+        "summary",
+        "unavailable"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

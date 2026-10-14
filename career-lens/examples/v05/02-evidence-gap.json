@@ -1,0 +1,452 @@
+{
+  "knowledge": {
+    "id": "enterprise-ai-applications",
+    "version": "2026-10-11.v05.1"
+  },
+  "date": "2026-10-11",
+  "revision": 1,
+  "case_id": "fictional-b",
+  "kind": "synthetic",
+  "target": {
+    "label": "企业AI知识应用产品经理（虚构目标）",
+    "precision": "direction",
+    "applicability": "演练目标以应用验证和持续改进为主，不包含独立全栈工程责任。"
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "personal",
+      "title": "简历表述",
+      "text": "简历只写“负责RAG、知识库与Agent”，没有说明本人决定或使用成果。",
+      "locator": "虚构材料B／简历"
+    },
+    {
+      "id": "E2",
+      "kind": "personal",
+      "title": "原始项目记录",
+      "text": "已经负责部门资料助手正式上线；保留业务负责人确认的达标样本、失败分类、迭代决策和后续使用结果。",
+      "locator": "虚构材料B／项目记录第1–4段"
+    }
+  ],
+  "judgments": [
+    {
+      "id": "J1",
+      "statement": "你已经有目标相关的交付与迭代经历，当前更需要把本人判断和结果讲清楚。",
+      "scope": "承担企业AI应用方案、验证与使用改进的岗位",
+      "finding_kind": "evidence_gap",
+      "responsibility_refs": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "evidence_refs": [
+        "E1",
+        "E2"
+      ],
+      "rationale": "项目记录覆盖验证、正式交付和使用迭代；简历只保留技术词，遮住了这些责任。按现有材料应先改善表达，重复做Demo无法解决主要问题。",
+      "alternatives": [
+        "如果项目记录实际上来自团队、本人只负责文档，这将变为责任归属问题。"
+      ],
+      "change_conditions": [
+        "本人责任或记录真实性出现相反材料时重审；新增具体JD的硬门槛也可能改变范围。"
+      ]
+    },
+    {
+      "id": "J2",
+      "statement": "优先争取能够发挥应用结果管理经验的岗位；扩大到多客户产品化需另看复用证据。",
+      "scope": "承担企业AI应用方案、验证与使用改进的岗位",
+      "finding_kind": "strength",
+      "responsibility_refs": [
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "evidence_refs": [
+        "E2"
+      ],
+      "rationale": "已正式交付支持应用结果责任；记录未涉及第二个客户，不能自然升级为多客户产品化。",
+      "alternatives": [
+        "表达改善不能保证面试成功，还需匹配具体行业与任职条件。"
+      ],
+      "change_conditions": [
+        "出现跨客户复用、成本及实施记录后可扩大目标责任。"
+      ]
+    }
+  ],
+  "presentation": {
+    "title": "经历已经发生，需要让招聘方看见你的判断",
+    "main_judgment": "J1",
+    "intro": "你的问题不在于缺少又一个AI项目。项目记录中已经有上线、失败和改进，但简历把它们压缩成了技术词。应先把做过的事说明白。",
+    "role_intro": "目标看重方案能否交付，以及负责人如何根据实际结果调整。技术框架说明实现方式，个人决定和结果才说明承担了哪些责任。",
+    "personal_intro": "简历与项目记录的信息量明显不同。判断应依据完整材料，不能只因为简历没写结果就认为没有结果经历。",
+    "comparison": [
+      {
+        "responsibility_ref": "D3",
+        "experience": "已有达标样本、失败分类和迭代决策。",
+        "difference": "材料具备，简历没有呈现关键判断。",
+        "judgment_ref": "J1"
+      },
+      {
+        "responsibility_ref": "D4",
+        "experience": "已正式上线，并跟进使用结果。",
+        "difference": "应展开一次使用证据如何改变方案。",
+        "judgment_ref": "J1"
+      },
+      {
+        "responsibility_ref": "D5",
+        "experience": "目前只提供单部门记录。",
+        "difference": "多客户复制责任需要另补具体证据。",
+        "judgment_ref": "J2"
+      }
+    ],
+    "paths": [
+      {
+        "title": "继续当前应用岗位方向",
+        "fit": "正式交付与使用改进经历已经相关。",
+        "investment": "从原始记录整理一项本人决定：问题、取舍、结果、修改理由。",
+        "tradeoff": "要准确归属本人责任，不能把团队成果全部算到个人。",
+        "choose_when": "你希望继续负责具体应用效果，且记录可复查。",
+        "judgment_refs": [
+          "J1"
+        ]
+      },
+      {
+        "title": "选择结果责任相近的应用方向",
+        "fit": "保留已积累的验证与迭代资产，以熟悉业务为优先。",
+        "investment": "按具体JD确认行业门槛；多客户岗位再补查复用责任。",
+        "tradeoff": "单部门成功暂时不能支撑任何行业或多客户责任。",
+        "choose_when": "当前岗位的行业或复制要求超出已证明范围。",
+        "judgment_refs": [
+          "J2"
+        ]
+      }
+    ],
+    "choice_note": "先把已有项目讲清楚，再根据具体JD决定是否补新经历。不要因为表达不足而重复建设一个相似Demo。",
+    "responsibility_refs": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "reader": {
+      "updated_at": "2026-10-12",
+      "snapshot": [
+        {
+          "label": "已有基础",
+          "text": "正式AI上线、失败分析与使用后迭代记录。",
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "label": "关键差异",
+          "text": "简历只写技术词，遮住本人判断和结果。",
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "label": "现在先做",
+          "text": "把已有项目讲清楚，再核对具体岗位。",
+          "judgment_refs": [
+            "J1",
+            "J2"
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "title": "看重验证与使用改进",
+          "requirement": "要求评估方案，并结合使用反馈继续调整。",
+          "meaning": "你的项目记录已有相关经历，先让招聘方看见本人决定。",
+          "check": "检查是否要求本人主责，确认行业与其他任职条件。",
+          "source_refs": [
+            "R015",
+            "R029"
+          ],
+          "evidence_refs": [],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "title": "增加多客户产品化责任",
+          "requirement": "要求跨场景复用，并控制实施成本。",
+          "meaning": "单部门成功尚未说明复制成本；不能直接扩大为多客户经验。",
+          "check": "确认岗位是否真正承担跨客户复制，而非仅一次内部交付。",
+          "source_refs": [
+            "R021"
+          ],
+          "evidence_refs": [],
+          "judgment_refs": [
+            "J2"
+          ]
+        }
+      ],
+      "insight": {
+        "title": "你需要提高的是可见度，而不是重复做项目",
+        "text": "上线记录、失败分类和使用反馈已经说明你走过相关阶段。但“负责RAG和Agent”只描述实现方式，招聘方还看不到你判断了什么。把一次取舍、证据和调整展开，比再做一个相似Demo更能解决当前问题。",
+        "judgment_refs": [
+          "J1"
+        ]
+      },
+      "findings": [
+        {
+          "status": "strength",
+          "title": "已经走过正式交付与迭代",
+          "fact": "项目记录有达标样本、失败分类、正式上线与后续使用结果。",
+          "meaning": "这段经历可以支撑应用效果责任，但仍需准确说明本人贡献。",
+          "next": "选择一个最能说明本人判断的迭代案例。",
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "status": "expression",
+          "title": "把被技术词遮住的经历讲出来",
+          "fact": "简历没有展开关键决定和结果。",
+          "meaning": "材料足够，现有表达不足；不能据此认定缺少上线经历。",
+          "next": "按问题、取舍、依据、调整与结果重写一段项目描述。",
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "status": "target",
+          "title": "跨客户责任需要另看",
+          "fact": "目前提供的是单部门记录，没有第二个客户。",
+          "meaning": "多客户岗位可能增加复用与成本门槛。",
+          "next": "遇到这类JD，再核对自己的复制记录与责任。",
+          "judgment_refs": [
+            "J2"
+          ]
+        }
+      ],
+      "path_steps": [
+        "从原始记录提炼一次本人决定，说明什么证据促成了调整。",
+        "选责任相近的具体JD，逐项确认行业与复制条件。"
+      ],
+      "next_step": {
+        "title": "先重写一段已有项目，而不是启动新Demo",
+        "text": "用一份真实项目记录回答：我负责什么、为什么选这个方案、什么失败让我改变决定、调整后发生了什么。已有结果用已有材料说明。",
+        "judgment_refs": [
+          "J1"
+        ]
+      },
+      "market_intro": "先看岗位实际要求，再看自己的经历对应哪一段。下面是招聘条件的差异，不是按职位名称分高低；同一个岗位也可能同时包含多种条件。"
+    },
+    "radar": {
+      "title": "岗位要求与你的经历对照",
+      "scope": "已核验企业AI应用职责的任务参照，含跨场景产品化扩展责任；是分析标尺，不是全国平均分或具体JD的统一门槛。",
+      "description": "虚构候选人已经有评估、正式交付和使用改进结果；其他过程需说明，不统一给低分。",
+      "default_axis": "A4",
+      "scale_id": "task-responsibility-5-v1",
+      "axes": [
+        {
+          "id": "A1",
+          "label": "业务洞察",
+          "label_lines": [
+            "业务洞察"
+          ],
+          "task_ref": "D1",
+          "anchors": [
+            "能解释业务问题",
+            "参与需求调研或局部分析",
+            "独立定义业务问题与需求",
+            "主导复杂业务取舍与验证",
+            "跨业务沉淀问题选择方法"
+          ],
+          "required_level": 3,
+          "personal_level": null,
+          "status": "information_gap",
+          "basis": "unrated",
+          "required_reason": "已核验职责要求识别高价值流程并把模糊问题转成需求和成功指标，以独立完成任务定义作为3级参照。",
+          "personal_reason": "虚构记录没有需求选择过程。",
+          "gap_note": "材料未展开，不判低分。",
+          "source_refs": [
+            "R015",
+            "R029"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E1",
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A2",
+          "label": "AI方案设计",
+          "label_lines": [
+            "AI方案",
+            "设计"
+          ],
+          "task_ref": "D2",
+          "anchors": [
+            "能解释AI方案原理",
+            "参与方案或完成局部配置",
+            "独立设计AI任务方案与边界",
+            "主导复杂系统与异常方案取舍",
+            "跨项目建立方案设计方法"
+          ],
+          "required_level": 3,
+          "personal_level": null,
+          "status": "information_gap",
+          "basis": "unrated",
+          "required_reason": "职责要求与工程团队共同确定工作流、数据、权限及人工确认，按独立方案设计的3级取保守参照，不因有架构一词直接判4级。",
+          "personal_reason": "虚构简历只有技术词，记录未说明方案选择。",
+          "gap_note": "补说明，不要求再做Demo。",
+          "source_refs": [
+            "R015",
+            "R001"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E1",
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A3",
+          "label": "效果评估",
+          "label_lines": [
+            "效果",
+            "评估"
+          ],
+          "task_ref": "D3",
+          "anchors": [
+            "能解释效果标准",
+            "已有测试或局部验证实践",
+            "独立定义样本、标准与评估决定",
+            "主导复杂失败分析与生产门槛",
+            "跨产品建立稳定评估方法"
+          ],
+          "required_level": 3,
+          "personal_level": 3,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "职责要求设计评估、识别失败并决定可用门槛，以独立评估决定为3级参照；不把JD出现次数作为分值。",
+          "personal_reason": "虚构记录含本人达标样本、失败分类与迭代决定。",
+          "gap_note": "已有评估结果，应展示。",
+          "source_refs": [
+            "R015",
+            "R001"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A4",
+          "label": "应用交付",
+          "label_lines": [
+            "应用交付"
+          ],
+          "task_ref": "D4",
+          "anchors": [
+            "能解释应用交付步骤",
+            "推进内部试用或局部交付准备",
+            "独立承担正式AI任务交付",
+            "主导复杂生产交付与异常处理",
+            "跨项目建立AI交付方法"
+          ],
+          "required_level": 3,
+          "personal_level": 3,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "端到端应用职责包括发布；结合正式上线条件，采用独立正式AI任务交付的3级参照。具体JD仍可能只要求核心参与。",
+          "personal_reason": "虚构记录含本人负责部门工具正式上线。",
+          "gap_note": "已有阶段经历，不能再建议先补正式上线。",
+          "source_refs": [
+            "R015",
+            "R001"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A5",
+          "label": "使用迭代",
+          "label_lines": [
+            "使用",
+            "迭代"
+          ],
+          "task_ref": "D4",
+          "anchors": [
+            "能解释采用与反馈问题",
+            "参与用户反馈或局部改进",
+            "独立跟进AI使用结果与迭代",
+            "主导跨团队采用及复杂运营改进",
+            "跨场景建立持续改进体系"
+          ],
+          "required_level": 3,
+          "personal_level": 3,
+          "status": "demonstrated",
+          "basis": "inferred",
+          "required_reason": "职责要求跟踪采用、任务完成和使用反馈，持续改进；采用独立使用结果责任的3级参照。",
+          "personal_reason": "虚构记录含使用反馈与本人迭代结果。",
+          "gap_note": "讲清本人决定。",
+          "source_refs": [
+            "R015",
+            "R029"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E2"
+          ],
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        {
+          "id": "A6",
+          "label": "产品化复用",
+          "label_lines": [
+            "产品化",
+            "复用"
+          ],
+          "task_ref": "D5",
+          "anchors": [
+            "能解释复用的价值",
+            "已做共性能力设计或局部配置",
+            "验证跨场景复用与交付成本",
+            "主导标准化与定制化的复杂取舍",
+            "跨产品建立复用与交付体系"
+          ],
+          "required_level": 4,
+          "personal_level": null,
+          "status": "information_gap",
+          "basis": "unrated",
+          "required_reason": "跨场景产品化职责要求平衡标准化与定制化并控制多行业实施成本，归为复杂复用取舍的4级参照。这是扩展责任，不是每个应用岗的门槛。",
+          "personal_reason": "虚构记录尚无第二个客户。",
+          "gap_note": "单部门成功不自动等于跨客户主责。",
+          "source_refs": [
+            "R021"
+          ],
+          "target_evidence_refs": [],
+          "personal_evidence_refs": [
+            "E2"
+          ],
+          "judgment_refs": [
+            "J2"
+          ]
+        }
+      ]
+    }
+  }
+}

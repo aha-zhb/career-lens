@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://career-lens.local/schemas/intake.schema.json",
+  "title": "Career Lens intake and prior belief baseline",
+  "type": "object",
+  "required": [
+    "target",
+    "prior_belief_status",
+    "prior_beliefs"
+  ],
+  "properties": {
+    "target": {
+      "$ref": "#/$defs/target"
+    },
+    "prior_belief_status": {
+      "enum": [
+        "captured",
+        "skipped"
+      ]
+    },
+    "prior_beliefs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "belief_id",
+          "statement"
+        ],
+        "properties": {
+          "belief_id": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "self_rated_importance": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1,
+            "maximum": 5
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "provided_jd_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "candidate_material_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "target": {
+      "type": "object",
+      "required": [
+        "role",
+        "location",
+        "seniority",
+        "sub_role",
+        "as_of",
+        "scope_note"
+      ],
+      "properties": {
+        "role": {
+          "type": "string"
+        },
+        "role_track": {
+          "enum": [
+            "ai_application_pm",
+            "ai_agent_application_pm",
+            "ai_platform_pm",
+            "ai_model_evaluation_pm",
+            "ai_growth_pm",
+            "uncertain"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "experience_years": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "seniority": {
+          "type": "string"
+        },
+        "sub_role": {
+          "type": "string"
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "scope_note": {
+          "type": "string"
+        },
+        "salary_expectation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "job_search_state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

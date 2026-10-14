@@ -1,0 +1,455 @@
+{
+  "case_id": "synthetic-ai-pm-001",
+  "synthetic": true,
+  "intake": {
+    "target": {
+      "role": "AI应用产品经理",
+      "location": "北京",
+      "seniority": "中级",
+      "sub_role": "Agent产品",
+      "as_of": "2026-10-10",
+      "scope_note": "仅用于演示数据流；不是市场抽样或真实个人评估。",
+      "role_track": "ai_agent_application_pm",
+      "experience_years": 5
+    },
+    "prior_belief_status": "captured",
+    "prior_beliefs": [
+      {
+        "belief_id": "B1",
+        "statement": "AI产品经理主要价值是写好提示词。",
+        "self_rated_importance": 5
+      }
+    ],
+    "provided_jd_ids": [
+      "SYNTH-1"
+    ],
+    "candidate_material_ids": [
+      "MAT-1"
+    ]
+  },
+  "sources": [
+    {
+      "id": "SYNTH-1",
+      "organization": "合成示例",
+      "title": "虚构AI应用产品经理岗位",
+      "role_track": "ai_agent_application_pm",
+      "location": "示例地区",
+      "seniority": "示例职级",
+      "collected_at": "2026-10-10",
+      "published_at": "2026-09-01",
+      "url": "https://example.invalid/synthetic-job",
+      "description_summary": "虚构岗位描述，仅为测试结构与引用关系。",
+      "responsibilities": [
+        "虚构：用户问题拆解",
+        "虚构：工具流程与评估"
+      ],
+      "requirements": [
+        "虚构：端到端交付"
+      ],
+      "source_status": "user_provided",
+      "eligibility": "included",
+      "exclusion_reason": null,
+      "dedupe_fingerprint": "b5bb4934bd4b1f7bc0975d7d68cedf945f73518143b9635479e2be3c58ca3c77"
+    }
+  ],
+  "market_model": {
+    "role_track": "ai_agent_application_pm",
+    "seniority_scope": "合成中级示例",
+    "geography": "合成地区",
+    "date_window": "合成示例窗口",
+    "generated_at": "2026-10-10",
+    "eligible_jd_count": 1,
+    "sampling_method": "synthetic_example_only",
+    "sources": [
+      "SYNTH-1"
+    ],
+    "sample_limitations": [
+      "完全合成的数据，仅用于验证格式、校验和图表行为。不能用于职业判断。"
+    ],
+    "market_confidence": "sufficient_for_rating",
+    "dimensions": [
+      {
+        "id": "product_discovery",
+        "name": "用户问题与产品定义",
+        "subskills": [],
+        "importance": "core",
+        "role_tasks": [
+          "合成演示任务：用户问题与产品定义"
+        ],
+        "supporting_sources": [
+          "SYNTH-1"
+        ],
+        "market_level": 4,
+        "level_rationale": "合成评分：示例要求能将用户问题转成可验证产品目标。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "能复述需求，尚不能界定问题。"
+          },
+          {
+            "level": 2,
+            "behavior": "能描述目标用户和主要场景。"
+          },
+          {
+            "level": 3,
+            "behavior": "能用证据拆解问题并定义可验证目标。"
+          },
+          {
+            "level": 4,
+            "behavior": "能权衡用户、业务与模型边界，形成完整方案。"
+          },
+          {
+            "level": 5,
+            "behavior": "能持续重构产品方向并验证规模化价值。"
+          }
+        ]
+      },
+      {
+        "id": "ai_capability",
+        "name": "模型能力与方案判断",
+        "subskills": [],
+        "importance": "core",
+        "role_tasks": [
+          "合成演示任务：模型能力与方案判断"
+        ],
+        "supporting_sources": [
+          "SYNTH-1"
+        ],
+        "market_level": 3,
+        "level_rationale": "合成评分：示例要求能判断模型适用边界和方案取舍。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "知道常见AI术语。"
+          },
+          {
+            "level": 2,
+            "behavior": "能说明模型能力和局限。"
+          },
+          {
+            "level": 3,
+            "behavior": "能基于任务选择模型或非模型方案。"
+          },
+          {
+            "level": 4,
+            "behavior": "能设计可靠的模型协作与降级策略。"
+          },
+          {
+            "level": 5,
+            "behavior": "能建立跨场景的技术产品决策框架。"
+          }
+        ]
+      },
+      {
+        "id": "agent_workflow",
+        "name": "Agent工作流与工具设计",
+        "subskills": [],
+        "importance": "core",
+        "role_tasks": [
+          "合成演示任务：Agent工作流与工具设计"
+        ],
+        "supporting_sources": [
+          "SYNTH-1"
+        ],
+        "market_level": 4,
+        "level_rationale": "合成评分：示例岗位涉及工具调用与流程编排。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "能描述单轮问答流程。"
+          },
+          {
+            "level": 2,
+            "behavior": "能画出简单多步任务流程。"
+          },
+          {
+            "level": 3,
+            "behavior": "能定义工具边界、异常与人工接管。"
+          },
+          {
+            "level": 4,
+            "behavior": "能设计可观察、可评估的端到端Agent流程。"
+          },
+          {
+            "level": 5,
+            "behavior": "能推动复杂流程的平台化与规模化复用。"
+          }
+        ]
+      },
+      {
+        "id": "data_knowledge",
+        "name": "数据、检索与知识",
+        "subskills": [],
+        "importance": "core",
+        "role_tasks": [
+          "合成演示任务：数据、检索与知识"
+        ],
+        "supporting_sources": [
+          "SYNTH-1"
+        ],
+        "market_level": 3,
+        "level_rationale": "合成评分：示例需要基本的检索与知识产品判断。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "知道产品依赖数据或知识。"
+          },
+          {
+            "level": 2,
+            "behavior": "能描述数据来源和更新需求。"
+          },
+          {
+            "level": 3,
+            "behavior": "能定义检索质量、知识治理和反馈指标。"
+          },
+          {
+            "level": 4,
+            "behavior": "能定位检索链路问题并设计持续改进。"
+          },
+          {
+            "level": 5,
+            "behavior": "能建立跨业务的知识与数据产品体系。"
+          }
+        ]
+      },
+      {
+        "id": "evaluation",
+        "name": "评估、实验与迭代",
+        "subskills": [],
+        "importance": "core",
+        "role_tasks": [
+          "合成演示任务：评估、实验与迭代"
+        ],
+        "supporting_sources": [
+          "SYNTH-1"
+        ],
+        "market_level": 4,
+        "level_rationale": "合成评分：示例强调评估和线上改进。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "以主观体验判断效果。"
+          },
+          {
+            "level": 2,
+            "behavior": "能整理典型案例并比较结果。"
+          },
+          {
+            "level": 3,
+            "behavior": "能设计离线评测集和关键指标。"
+          },
+          {
+            "level": 4,
+            "behavior": "能结合线上反馈定位问题并验证改进。"
+          },
+          {
+            "level": 5,
+            "behavior": "能构建稳定评估机制并驱动持续迭代。"
+          }
+        ]
+      },
+      {
+        "id": "delivery_collaboration",
+        "name": "交付、治理与协同",
+        "subskills": [],
+        "importance": "core",
+        "role_tasks": [
+          "合成演示任务：交付、治理与协同"
+        ],
+        "supporting_sources": [
+          "SYNTH-1"
+        ],
+        "market_level": 3,
+        "level_rationale": "合成评分：示例需要跨职能推进并处理风险。",
+        "rubric": [
+          {
+            "level": 1,
+            "behavior": "能跟进个人任务。"
+          },
+          {
+            "level": 2,
+            "behavior": "能与单一研发团队协作交付。"
+          },
+          {
+            "level": 3,
+            "behavior": "能跨职能拆解计划、风险和验收责任。"
+          },
+          {
+            "level": 4,
+            "behavior": "能解决复杂依赖并稳定规模化上线。"
+          },
+          {
+            "level": 5,
+            "behavior": "能建立组织级协作和治理机制。"
+          }
+        ]
+      }
+    ],
+    "hard_filters": [],
+    "candidate_jd_count": 1,
+    "quality_review": {
+      "approved_for_rating": true,
+      "rationale": "仅合成脚本演示数据，虚构样本不构成真实市场评级。"
+    }
+  },
+  "candidate_evidence": {
+    "candidate_id": "synthetic-person-001",
+    "materials": [
+      {
+        "id": "MAT-1",
+        "kind": "project_description",
+        "provided_by_user": true,
+        "filename_redacted": "synthetic-project-notes.md"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "EV01",
+        "capability_id": "product_discovery",
+        "source_material_id": "MAT-1",
+        "source_excerpt_or_summary": "虚构材料：完成一次用户问题拆解练习。",
+        "involvement": "contributor",
+        "outcome": null,
+        "strength": "moderate",
+        "evidence_type": "self_report"
+      },
+      {
+        "evidence_id": "EV02",
+        "capability_id": "ai_capability",
+        "source_material_id": "MAT-1",
+        "source_excerpt_or_summary": "虚构材料：记录过模型与规则方案的比较。",
+        "involvement": "contributor",
+        "outcome": null,
+        "strength": "moderate",
+        "evidence_type": "self_report"
+      },
+      {
+        "evidence_id": "EV03",
+        "capability_id": "evaluation",
+        "source_material_id": "MAT-1",
+        "source_excerpt_or_summary": "虚构材料：对少量失败案例做过归类。",
+        "involvement": "contributor",
+        "outcome": null,
+        "strength": "moderate",
+        "evidence_type": "self_report"
+      }
+    ],
+    "assessments": [
+      {
+        "dimension_id": "product_discovery",
+        "status": "verified",
+        "score": 3,
+        "rationale": "合成虚构证据支持部分独立定义目标。",
+        "evidence_ids": [
+          "EV01"
+        ],
+        "missing_evidence": []
+      },
+      {
+        "dimension_id": "ai_capability",
+        "status": "verified",
+        "score": 3,
+        "rationale": "合成虚构证据支持方案比较。",
+        "evidence_ids": [
+          "EV02"
+        ],
+        "missing_evidence": []
+      },
+      {
+        "dimension_id": "agent_workflow",
+        "status": "unknown",
+        "score": null,
+        "rationale": "尚无材料支持判断。",
+        "evidence_ids": [],
+        "missing_evidence": [
+          "本人任务、决策和结果的具体材料"
+        ]
+      },
+      {
+        "dimension_id": "data_knowledge",
+        "status": "unknown",
+        "score": null,
+        "rationale": "尚无材料支持判断。",
+        "evidence_ids": [],
+        "missing_evidence": [
+          "本人任务、决策和结果的具体材料"
+        ]
+      },
+      {
+        "dimension_id": "evaluation",
+        "status": "verified",
+        "score": 2,
+        "rationale": "合成虚构证据仅支持案例复盘。",
+        "evidence_ids": [
+          "EV03"
+        ],
+        "missing_evidence": []
+      },
+      {
+        "dimension_id": "delivery_collaboration",
+        "status": "unknown",
+        "score": null,
+        "rationale": "尚无材料支持判断。",
+        "evidence_ids": [],
+        "missing_evidence": [
+          "本人任务、决策和结果的具体材料"
+        ]
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "statement": "AI产品经理主要价值是写好提示词。",
+      "comparison": "partly_supported",
+      "explanation": "提示设计可能有用，但合成模型还包含问题定义、工作流、评估和交付。",
+      "dimension_refs": [
+        "product_discovery",
+        "agent_workflow",
+        "evaluation"
+      ],
+      "belief_id": "B1"
+    }
+  ],
+  "report_content": {
+    "three_conclusions": [
+      "合成演示：市场模型把Agent流程与效果评测作为重要能力。",
+      "合成演示：已有材料仅支持部分问题定义、模型方案比较和案例复盘。",
+      "合成演示：Agent流程、检索知识和跨职能交付仍待验证，不能据此判断为能力短板。"
+    ],
+    "actions": [
+      {
+        "why": "验证Agent工作流是否有可复盘的个人实践。",
+        "task": "用一个虚构业务任务画出工具边界、异常处理和人工接管流程。",
+        "deliverable": "一页流程图和关键取舍说明。",
+        "check": "由同伴按rubric核对边界、异常和验收是否齐全。",
+        "period": "第1周",
+        "action_type": "evidence_gap",
+        "capability_ids": [
+          "agent_workflow"
+        ],
+        "evidence_ids": []
+      },
+      {
+        "why": "把案例复盘提升为可核查的评估设计。",
+        "task": "为虚构场景定义成功指标、测试样本和失败归因方法。",
+        "deliverable": "评测计划与样例集。",
+        "check": "逐项对照rubric并记录未覆盖问题。",
+        "period": "第2–3周",
+        "action_type": "capability_gap",
+        "capability_ids": [
+          "evaluation"
+        ],
+        "evidence_ids": [
+          "EV03"
+        ]
+      }
+    ],
+    "followup_questions": [
+      "请描述你本人参与过的一次多步AI任务：你定义了哪些工具边界或人工接管条件？想确认：Agent工作流能力是否有直接材料证据。",
+      "你曾如何定义一项AI功能的成功指标和评测样本？想确认：评测能力能否从案例复盘提升到独立设计。",
+      "在一次跨团队上线中，你负责的验收标准和风险处理是什么？想确认：协同交付证据。"
+    ]
+  },
+  "workflow_state": "DELIVERED",
+  "revision_history": []
+}

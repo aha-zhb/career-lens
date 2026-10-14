@@ -1,0 +1,276 @@
+{
+  "case": {
+    "case_id": "fictional-cs-expression",
+    "revision": 1,
+    "kind": "synthetic",
+    "date": "2026-10-12",
+    "target": {
+      "label": "客户成功（虚构目标）",
+      "precision": "posting",
+      "applicability": "仅针对所给虚构职责，不使用企业AI知识。"
+    },
+    "knowledge": {
+      "id": "synthetic-cs-expression",
+      "version": "fictional-v1"
+    },
+    "evidence": [
+      {
+        "id": "E1",
+        "kind": "personal",
+        "title": "虚构个人材料",
+        "text": "简历只写培训；原始项目记录另有本人跟进采用、识别续约风险并推动解决的过程和结果。",
+        "locator": "虚构演练资料"
+      },
+      {
+        "id": "T1",
+        "kind": "target",
+        "title": "虚构目标JD",
+        "text": "虚构目标要求跟进客户采用和续约风险，技术问题由支持团队协作处理。",
+        "locator": "虚构演练目标"
+      }
+    ],
+    "judgments": [
+      {
+        "id": "J1",
+        "statement": "已经承担相关客户经营责任，应先让现有经历可见。",
+        "scope": "仅该虚构目标",
+        "finding_kind": "evidence_gap",
+        "responsibility_refs": [
+          "D1",
+          "D2"
+        ],
+        "evidence_refs": [
+          "E1",
+          "T1"
+        ],
+        "rationale": "完整记录包含采用与风险处理，问题在简历把它们缩成培训。应先说明为什么判断某客户存在风险、本人采取什么措施及结果，而不是重复积累已经发生的同类经历。",
+        "alternatives": [
+          "若本人实际责任或目标分工不同，当前解释需要重新审视。"
+        ],
+        "change_conditions": [
+          "新增本人责任、结果记录或不同JD条件时重新判断。"
+        ]
+      }
+    ],
+    "presentation": {
+      "title": "已经承担相关客户经营责任，应先让现有经历可见。",
+      "main_judgment": "J1",
+      "intro": "完整记录包含采用与风险处理，问题在简历把它们缩成培训。应先说明为什么判断某客户存在风险、本人采取什么措施及结果，而不是重复积累已经发生的同类经历。",
+      "role_intro": "完整记录包含采用与风险处理，问题在简历把它们缩成培训。应先说明为什么判断某客户存在风险、本人采取什么措施及结果，而不是重复积累已经发生的同类经历。",
+      "personal_intro": "简历只写培训；原始项目记录另有本人跟进采用、识别续约风险并推动解决的过程和结果。",
+      "responsibility_refs": [
+        "D1",
+        "D2"
+      ],
+      "comparison": [
+        {
+          "responsibility_ref": "D2",
+          "experience": "简历只写培训；原始项目记录另有本人跟进采用、识别续约风险并推动解决的过程和结果。",
+          "difference": "已经承担相关客户经营责任，应先让现有经历可见。",
+          "judgment_ref": "J1"
+        }
+      ],
+      "paths": [
+        {
+          "title": "当前优先方向",
+          "fit": "先整理已有风险处理案例；无需因简历过短而重做一段客户成功经历。",
+          "investment": "按该责任整理已有记录或取得相应工作机会。",
+          "tradeoff": "近期适配与长期目标需要分别考虑。",
+          "choose_when": "符合本人想承担的责任及现实条件。",
+          "judgment_refs": [
+            "J1"
+          ]
+        }
+      ],
+      "choice_note": "先整理已有风险处理案例；无需因简历过短而重做一段客户成功经历。",
+      "focus": {
+        "summary": {
+          "text": "已经处理过客户采用与续约风险，优先让现有记录中的判断和结果被看见。",
+          "judgment_refs": [
+            "J1"
+          ]
+        },
+        "research_note": "全部为虚构材料，仅用于跨职业界面演练；未进行客户成功市场研究。",
+        "priorities": [
+          {
+            "title": "先讲清一次客户风险处理",
+            "text": "从已有记录说明为什么判断客户可能流失、采取了什么措施及实际结果，无需重复做培训。",
+            "judgment_refs": [
+              "J1"
+            ]
+          }
+        ]
+      },
+      "radar": {
+        "title": "客户成功：岗位要求与已有经历（虚构）",
+        "scope": "只针对虚构JD，不代表市场平均要求。",
+        "description": "三个客户成功维度；客户理解未评级，使用与续约有相关经历。",
+        "default_axis": "A2",
+        "scale_id": "task-responsibility-5-v1",
+        "axes": [
+          {
+            "id": "A1",
+            "label": "客户理解",
+            "label_lines": [
+              "客户理解"
+            ],
+            "task_ref": "D1",
+            "anchors": [
+              "理解客户目标",
+              "参与客户调研",
+              "独立确认客户目标与障碍",
+              "解决复杂客户价值分歧",
+              "建立跨客户洞察方法"
+            ],
+            "required_level": 3,
+            "personal_level": null,
+            "status": "information_gap",
+            "basis": "unrated",
+            "required_reason": "依据所给虚构JD，演练独立承担该工作。",
+            "personal_reason": "已有培训和客户沟通记录，尚未展开客户目标分析。",
+            "gap_note": "先说明一次客户需求判断，材料不足不判低分。",
+            "source_refs": [
+              "S1"
+            ],
+            "target_evidence_refs": [
+              "T1"
+            ],
+            "personal_evidence_refs": [
+              "E1"
+            ],
+            "judgment_refs": [
+              "J1"
+            ],
+            "explanation": {
+              "requirement": "了解客户想完成什么工作、为什么没用起来。",
+              "experience": "已有培训和客户沟通记录，尚未展开客户目标分析。",
+              "difference": "先说明一次客户需求判断，材料不足不判低分。"
+            }
+          },
+          {
+            "id": "A2",
+            "label": "使用推进",
+            "label_lines": [
+              "使用推进"
+            ],
+            "task_ref": "D2",
+            "anchors": [
+              "了解使用障碍",
+              "参与客户使用支持",
+              "独立推进客户采用",
+              "解决复杂组织使用障碍",
+              "建立客户采用方法"
+            ],
+            "required_level": 3,
+            "personal_level": 3,
+            "status": "demonstrated",
+            "basis": "inferred",
+            "required_reason": "依据所给虚构JD，演练独立承担该工作。",
+            "personal_reason": "虚构项目记录已有本人跟进采用与推动解决的过程。",
+            "gap_note": "已有相关工作，先让简历看见一次决定和结果。",
+            "source_refs": [
+              "S1"
+            ],
+            "target_evidence_refs": [
+              "T1"
+            ],
+            "personal_evidence_refs": [
+              "E1"
+            ],
+            "judgment_refs": [
+              "J1"
+            ],
+            "explanation": {
+              "requirement": "发现使用障碍并推动客户持续采用，而不只完成培训。",
+              "experience": "虚构项目记录已有本人跟进采用与推动解决的过程。",
+              "difference": "已有相关工作，先让简历看见一次决定和结果。"
+            }
+          },
+          {
+            "id": "A3",
+            "label": "续约经营",
+            "label_lines": [
+              "续约经营"
+            ],
+            "task_ref": "D2",
+            "anchors": [
+              "理解续约风险",
+              "参与客户风险处理",
+              "独立识别风险并推动解决",
+              "主导复杂客户续约取舍",
+              "建立客户经营方法"
+            ],
+            "required_level": 3,
+            "personal_level": 3,
+            "status": "demonstrated",
+            "basis": "inferred",
+            "required_reason": "依据所给虚构JD，演练独立承担该工作。",
+            "personal_reason": "已有本人识别风险、推动解决及后续结果的记录。",
+            "gap_note": "优先讲清一次风险判断；不需要因为简历短而重做项目。",
+            "source_refs": [
+              "S1"
+            ],
+            "target_evidence_refs": [
+              "T1"
+            ],
+            "personal_evidence_refs": [
+              "E1"
+            ],
+            "judgment_refs": [
+              "J1"
+            ],
+            "explanation": {
+              "requirement": "发现续约风险，并与客户和团队合作处理。",
+              "experience": "已有本人识别风险、推动解决及后续结果的记录。",
+              "difference": "优先讲清一次风险判断；不需要因为简历短而重做项目。"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "knowledge": {
+    "id": "synthetic-cs-expression",
+    "version": "fictional-v1",
+    "scope": "客户成功虚构职责，仅演练方法",
+    "maturity": "limited",
+    "limitations": "全部材料虚构；未进行该职业市场研究，不代表真实岗位分布。",
+    "sources": [
+      {
+        "id": "S1",
+        "title": "客户成功虚构JD",
+        "url": "https://example.org/fictional/cs-expression",
+        "captured_at": "2026-10-12",
+        "visibility": "full_description",
+        "locator": "虚构目标全文",
+        "summary": "虚构目标要求跟进客户采用和续约风险，技术问题由支持团队协作处理。"
+      }
+    ],
+    "responsibilities": [
+      {
+        "id": "D1",
+        "title": "培训与支持",
+        "question": "已有工作解决什么问题？",
+        "observed": "培训与支持是虚构目标中的相关基础任务。",
+        "mechanism": "基础任务可能为后续工作提供条件，但不能自动代替后续责任。",
+        "evidence_standard": "说明本人决定与实际结果。",
+        "scope": "仅该虚构目标",
+        "source_refs": [
+          "S1"
+        ]
+      },
+      {
+        "id": "D2",
+        "title": "客户经营与续约",
+        "question": "新增责任要求本人决定什么？",
+        "observed": "虚构目标要求跟进客户采用和续约风险，技术问题由支持团队协作处理。",
+        "mechanism": "完整记录包含采用与风险处理，问题在简历把它们缩成培训。应先说明为什么判断某客户存在风险、本人采取什么措施及结果，而不是重复积累已经发生的同类经历。",
+        "evidence_standard": "说明一项相应责任的本人决定、依据与结果。",
+        "scope": "仅该虚构目标",
+        "source_refs": [
+          "S1"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{% if focus %}{% include "radar-focus.html.j2" %}{% else %}
+<div class="radar-heading"><p class="meta">{% if case.kind == 'synthetic' %}虚构案例 · 方法演练{% else %}你的职业判断{% endif %} · {{ reader.updated_at if reader else case.date }}</p><h1 id="page-title">{{ radar.title }}</h1><p class="target">{{ case.target.label }}</p></div>
+<figure class="radar-panel" aria-label="岗位要求与个人经历雷达对照">
+<div class="radar-legend"><span class="target-legend">虚线圆点 · 岗位要求</span><span class="personal-legend">实线方点 · 个人已展示水平</span></div>
+<div class="radar-plot"><svg class="career-radar" role="img" aria-label="{{ radar.description }}"></svg></div>
+<figcaption>刻度1—5表示任务责任。缺经历＝阶段缺口；需讲清＝材料问题，均不补0分。</figcaption>
+<div class="radar-axis-controls" role="group" aria-label="查看雷达各维度">{% for a in radar.axes %}<button type="button" data-axis="{{ a.id }}" aria-pressed="{{ 'true' if a.id == radar.default_axis else 'false' }}" aria-controls="radar-detail">{{ a.label }}</button>{% endfor %}</div>
+<script type="application/json" class="radar-data">{{ radar|tojson }}</script>
+<noscript><p>开启JavaScript可查看图形；下面的逐轴依据与报告正文仍可阅读。</p></noscript>
+</figure>
+<div class="radar-summary"><h2>{{ p.title }}</h2><p class="lead">{{ judgments[p.main_judgment].statement }}</p>{% if reader %}<dl class="snapshot" aria-label="个人判断快照">{% for item in reader.snapshot %}<div><dt>{{ item.label }}</dt><dd>{{ item.text }}</dd></div>{% endfor %}</dl>{% endif %}<p class="radar-scope">{{ radar.scope }}</p></div>
+{% set axis = radar.axes|selectattr('id', 'equalto', radar.default_axis)|first %}
+<div class="radar-detail" id="radar-detail" aria-live="polite"><h2>{{ axis.label }}</h2><div class="radar-detail-grid"><div><span class="inline-label">岗位要求</span><b class="required-value">{{ axis.required_level }} · {{ axis.anchors[axis.required_level-1] }}</b><p class="required-reason">{{ axis.required_reason }}</p></div><div><span class="inline-label">你的相关经历</span><b class="personal-value">{% if axis.personal_level is not none %}{{ axis.personal_level }} · {{ axis.anchors[axis.personal_level-1] }}{% elif axis.status == 'experience_gap' %}缺少该阶段的完整经历{% else %}需要展开项目说明{% endif %}</b><p class="personal-reason">{{ axis.personal_reason }}</p></div></div><p class="radar-gap">{{ axis.gap_note }}</p><a class="radar-audit-link" href="#radar-axis-{{ axis.id }}">核对本轴依据</a></div>
+
+{% endif %}

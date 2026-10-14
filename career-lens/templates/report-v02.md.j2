@@ -1,0 +1,39 @@
+# Career Lens｜{{ intake.target.sub_role }}
+
+{{ intake.target.location }} · {{ intake.target.seniority }} · {{ intake.target.as_of }}{% if synthetic %} · **合成演示：非真实诊断**{% endif %}
+
+## 1. {{ "你的定位" if personal_available else "岗位理解" }}
+
+**{{ report_content.headline }}**
+
+{% if chart_path %}![{{ chart_alt }}]({{ chart_path }}){% else %}{{ chart_note }}{% endif %}
+
+> {{ report_content.scope_summary }}
+
+{% for f in report_content.findings %}### {{ f.title }}
+
+{{ f.text }} {% for sid in f.source_ids %}[{{ source_map[sid].organization }}]({{ source_map[sid].url or evidence_filename }}){% if not loop.last %}、{% endif %}{% endfor %}
+
+{% endfor %}
+## 2. {{ "最值得关注的差异" if personal_available else "核心任务与责任" }}
+
+{% for d in report_content.differences %}### {{ d.title }}
+
+- 岗位任务：{{ d.market_requirement }}
+- {{ "你的经历" if personal_available else "材料范围" }}：{{ d.personal_evidence }}
+- {{ "对你的影响" if personal_available else "理解与应用" }}：{{ d.implication }}
+
+依据：{% for sid in d.source_ids %}[{{ source_map[sid].organization }}]({{ source_map[sid].url or evidence_filename }}){% if not loop.last %}、{% endif %}{% endfor %}
+
+{% endfor %}
+## 3. 接下来先做这{{ report_content.actions|length }}件事
+
+{% for a in report_content.actions %}### {{ loop.index }}. {{ a.why }}
+
+- 任务：{{ a.task }}
+- 产出：{{ a.deliverable }}
+- 完成条件：{{ a.check }}
+- 顺序与周期：{{ a.period }}
+
+{% endfor %}
+[查看研究与判断依据]({{ evidence_filename }}) · [打开图文版]({{ html_filename }})

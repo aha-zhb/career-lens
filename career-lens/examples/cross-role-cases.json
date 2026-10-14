@@ -1,0 +1,538 @@
+[
+  {
+    "id": "cs-experience",
+    "note": "全部虚构，由同一Agent编写并回放，不是独立验证。",
+    "knowledge": {
+      "id": "synthetic-cs-experience",
+      "version": "fictional-v1",
+      "scope": "客户成功虚构职责，仅演练方法",
+      "maturity": "limited",
+      "limitations": "全部材料虚构；未进行该职业市场研究，不代表真实岗位分布。",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "客户成功虚构JD",
+          "url": "https://example.org/fictional/cs-experience",
+          "captured_at": "2026-10-12",
+          "visibility": "full_description",
+          "locator": "虚构目标全文",
+          "summary": "虚构目标要求跟进客户采用和续约风险，技术问题由支持团队协作处理。"
+        }
+      ],
+      "responsibilities": [
+        {
+          "id": "D1",
+          "title": "培训与支持",
+          "question": "已有工作解决什么问题？",
+          "observed": "培训与支持是虚构目标中的相关基础任务。",
+          "mechanism": "基础任务可能为后续工作提供条件，但不能自动代替后续责任。",
+          "evidence_standard": "说明本人决定与实际结果。",
+          "scope": "仅该虚构目标",
+          "source_refs": [
+            "S1"
+          ]
+        },
+        {
+          "id": "D2",
+          "title": "客户经营与续约",
+          "question": "新增责任要求本人决定什么？",
+          "observed": "虚构目标要求跟进客户采用和续约风险，技术问题由支持团队协作处理。",
+          "mechanism": "培训帮助客户开始使用，但持续采用还涉及使用障碍、关键人和价值是否兑现。现有经历可以迁移到沟通与问题处理，却没有覆盖本人确认未做过的续约责任。应先争取客户经营任务，或选择以培训支持为主的职责。",
+          "evidence_standard": "说明一项相应责任的本人决定、依据与结果。",
+          "scope": "仅该虚构目标",
+          "source_refs": [
+            "S1"
+          ]
+        }
+      ]
+    },
+    "case": {
+      "case_id": "fictional-cs-experience",
+      "revision": 1,
+      "kind": "synthetic",
+      "date": "2026-10-12",
+      "target": {
+        "label": "客户成功（虚构目标）",
+        "precision": "posting",
+        "applicability": "仅针对所给虚构职责，不使用企业AI知识。"
+      },
+      "knowledge": {
+        "id": "synthetic-cs-experience",
+        "version": "fictional-v1"
+      },
+      "evidence": [
+        {
+          "id": "E1",
+          "kind": "personal",
+          "title": "虚构个人材料",
+          "text": "做过客户培训和问题响应；本人确认没有负责客户采用与续约风险。",
+          "locator": "虚构演练资料"
+        },
+        {
+          "id": "T1",
+          "kind": "target",
+          "title": "虚构目标JD",
+          "text": "虚构目标要求跟进客户采用和续约风险，技术问题由支持团队协作处理。",
+          "locator": "虚构演练目标"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "J1",
+          "statement": "缺少客户经营这段责任，培训经验仍是相关基础。",
+          "scope": "仅该虚构目标",
+          "finding_kind": "experience_gap",
+          "responsibility_refs": [
+            "D1",
+            "D2"
+          ],
+          "evidence_refs": [
+            "E1",
+            "T1"
+          ],
+          "rationale": "培训帮助客户开始使用，但持续采用还涉及使用障碍、关键人和价值是否兑现。现有经历可以迁移到沟通与问题处理，却没有覆盖本人确认未做过的续约责任。应先争取客户经营任务，或选择以培训支持为主的职责。",
+          "alternatives": [
+            "若本人实际责任或目标分工不同，当前解释需要重新审视。"
+          ],
+          "change_conditions": [
+            "新增本人责任、结果记录或不同JD条件时重新判断。"
+          ]
+        }
+      ],
+      "presentation": {
+        "title": "缺少客户经营这段责任，培训经验仍是相关基础。",
+        "main_judgment": "J1",
+        "intro": "培训帮助客户开始使用，但持续采用还涉及使用障碍、关键人和价值是否兑现。现有经历可以迁移到沟通与问题处理，却没有覆盖本人确认未做过的续约责任。应先争取客户经营任务，或选择以培训支持为主的职责。",
+        "role_intro": "培训帮助客户开始使用，但持续采用还涉及使用障碍、关键人和价值是否兑现。现有经历可以迁移到沟通与问题处理，却没有覆盖本人确认未做过的续约责任。应先争取客户经营任务，或选择以培训支持为主的职责。",
+        "personal_intro": "做过客户培训和问题响应；本人确认没有负责客户采用与续约风险。",
+        "responsibility_refs": [
+          "D1",
+          "D2"
+        ],
+        "comparison": [
+          {
+            "responsibility_ref": "D2",
+            "experience": "做过客户培训和问题响应；本人确认没有负责客户采用与续约风险。",
+            "difference": "缺少客户经营这段责任，培训经验仍是相关基础。",
+            "judgment_ref": "J1"
+          }
+        ],
+        "paths": [
+          {
+            "title": "当前优先方向",
+            "fit": "优先补客户采用与风险处理责任，或选更贴近现有经历的岗位；再做一次培训不会自动补齐续约经营。",
+            "investment": "按该责任整理已有记录或取得相应工作机会。",
+            "tradeoff": "近期适配与长期目标需要分别考虑。",
+            "choose_when": "符合本人想承担的责任及现实条件。",
+            "judgment_refs": [
+              "J1"
+            ]
+          }
+        ],
+        "choice_note": "优先补客户采用与风险处理责任，或选更贴近现有经历的岗位；再做一次培训不会自动补齐续约经营。"
+      }
+    }
+  },
+  {
+    "id": "cs-expression",
+    "note": "全部虚构，由同一Agent编写并回放，不是独立验证。",
+    "knowledge": {
+      "id": "synthetic-cs-expression",
+      "version": "fictional-v1",
+      "scope": "客户成功虚构职责，仅演练方法",
+      "maturity": "limited",
+      "limitations": "全部材料虚构；未进行该职业市场研究，不代表真实岗位分布。",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "客户成功虚构JD",
+          "url": "https://example.org/fictional/cs-expression",
+          "captured_at": "2026-10-12",
+          "visibility": "full_description",
+          "locator": "虚构目标全文",
+          "summary": "虚构目标要求跟进客户采用和续约风险，技术问题由支持团队协作处理。"
+        }
+      ],
+      "responsibilities": [
+        {
+          "id": "D1",
+          "title": "培训与支持",
+          "question": "已有工作解决什么问题？",
+          "observed": "培训与支持是虚构目标中的相关基础任务。",
+          "mechanism": "基础任务可能为后续工作提供条件，但不能自动代替后续责任。",
+          "evidence_standard": "说明本人决定与实际结果。",
+          "scope": "仅该虚构目标",
+          "source_refs": [
+            "S1"
+          ]
+        },
+        {
+          "id": "D2",
+          "title": "客户经营与续约",
+          "question": "新增责任要求本人决定什么？",
+          "observed": "虚构目标要求跟进客户采用和续约风险，技术问题由支持团队协作处理。",
+          "mechanism": "完整记录包含采用与风险处理，问题在简历把它们缩成培训。应先说明为什么判断某客户存在风险、本人采取什么措施及结果，而不是重复积累已经发生的同类经历。",
+          "evidence_standard": "说明一项相应责任的本人决定、依据与结果。",
+          "scope": "仅该虚构目标",
+          "source_refs": [
+            "S1"
+          ]
+        }
+      ]
+    },
+    "case": {
+      "case_id": "fictional-cs-expression",
+      "revision": 1,
+      "kind": "synthetic",
+      "date": "2026-10-12",
+      "target": {
+        "label": "客户成功（虚构目标）",
+        "precision": "posting",
+        "applicability": "仅针对所给虚构职责，不使用企业AI知识。"
+      },
+      "knowledge": {
+        "id": "synthetic-cs-expression",
+        "version": "fictional-v1"
+      },
+      "evidence": [
+        {
+          "id": "E1",
+          "kind": "personal",
+          "title": "虚构个人材料",
+          "text": "简历只写培训；原始项目记录另有本人跟进采用、识别续约风险并推动解决的过程和结果。",
+          "locator": "虚构演练资料"
+        },
+        {
+          "id": "T1",
+          "kind": "target",
+          "title": "虚构目标JD",
+          "text": "虚构目标要求跟进客户采用和续约风险，技术问题由支持团队协作处理。",
+          "locator": "虚构演练目标"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "J1",
+          "statement": "已经承担相关客户经营责任，应先让现有经历可见。",
+          "scope": "仅该虚构目标",
+          "finding_kind": "evidence_gap",
+          "responsibility_refs": [
+            "D1",
+            "D2"
+          ],
+          "evidence_refs": [
+            "E1",
+            "T1"
+          ],
+          "rationale": "完整记录包含采用与风险处理，问题在简历把它们缩成培训。应先说明为什么判断某客户存在风险、本人采取什么措施及结果，而不是重复积累已经发生的同类经历。",
+          "alternatives": [
+            "若本人实际责任或目标分工不同，当前解释需要重新审视。"
+          ],
+          "change_conditions": [
+            "新增本人责任、结果记录或不同JD条件时重新判断。"
+          ]
+        }
+      ],
+      "presentation": {
+        "title": "已经承担相关客户经营责任，应先让现有经历可见。",
+        "main_judgment": "J1",
+        "intro": "完整记录包含采用与风险处理，问题在简历把它们缩成培训。应先说明为什么判断某客户存在风险、本人采取什么措施及结果，而不是重复积累已经发生的同类经历。",
+        "role_intro": "完整记录包含采用与风险处理，问题在简历把它们缩成培训。应先说明为什么判断某客户存在风险、本人采取什么措施及结果，而不是重复积累已经发生的同类经历。",
+        "personal_intro": "简历只写培训；原始项目记录另有本人跟进采用、识别续约风险并推动解决的过程和结果。",
+        "responsibility_refs": [
+          "D1",
+          "D2"
+        ],
+        "comparison": [
+          {
+            "responsibility_ref": "D2",
+            "experience": "简历只写培训；原始项目记录另有本人跟进采用、识别续约风险并推动解决的过程和结果。",
+            "difference": "已经承担相关客户经营责任，应先让现有经历可见。",
+            "judgment_ref": "J1"
+          }
+        ],
+        "paths": [
+          {
+            "title": "当前优先方向",
+            "fit": "先整理已有风险处理案例；无需因简历过短而重做一段客户成功经历。",
+            "investment": "按该责任整理已有记录或取得相应工作机会。",
+            "tradeoff": "近期适配与长期目标需要分别考虑。",
+            "choose_when": "符合本人想承担的责任及现实条件。",
+            "judgment_refs": [
+              "J1"
+            ]
+          }
+        ],
+        "choice_note": "先整理已有风险处理案例；无需因简历过短而重做一段客户成功经历。"
+      }
+    }
+  },
+  {
+    "id": "analyst-value",
+    "note": "全部虚构，由同一Agent编写并回放，不是独立验证。",
+    "knowledge": {
+      "id": "synthetic-analyst-value",
+      "version": "fictional-v1",
+      "scope": "数据分析虚构职责，仅演练方法",
+      "maturity": "limited",
+      "limitations": "全部材料虚构；未进行该职业市场研究，不代表真实岗位分布。",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "数据分析虚构JD",
+          "url": "https://example.org/fictional/analyst-value",
+          "captured_at": "2026-10-12",
+          "visibility": "full_description",
+          "locator": "虚构目标全文",
+          "summary": "虚构目标要求识别经营问题、解释指标变化并提出可检验的建议。"
+        }
+      ],
+      "responsibilities": [
+        {
+          "id": "D1",
+          "title": "报表与看板",
+          "question": "已有工作解决什么问题？",
+          "observed": "报表与看板是虚构目标中的相关基础任务。",
+          "mechanism": "基础任务可能为后续工作提供条件，但不能自动代替后续责任。",
+          "evidence_standard": "说明本人决定与实际结果。",
+          "scope": "仅该虚构目标",
+          "source_refs": [
+            "S1"
+          ]
+        },
+        {
+          "id": "D2",
+          "title": "经营决策支持",
+          "question": "新增责任要求本人决定什么？",
+          "observed": "虚构目标要求识别经营问题、解释指标变化并提出可检验的建议。",
+          "mechanism": "看板让变化可见，解释变化则要区分口径、样本和业务因素，否则建议可能针对错误原因。已有制作经验是起点；本人确认未承担后段任务，因此先争取一项分析与建议责任，比默认再学一个可视化工具更直接。",
+          "evidence_standard": "说明一项相应责任的本人决定、依据与结果。",
+          "scope": "仅该虚构目标",
+          "source_refs": [
+            "S1"
+          ]
+        }
+      ]
+    },
+    "case": {
+      "case_id": "fictional-analyst-value",
+      "revision": 1,
+      "kind": "synthetic",
+      "date": "2026-10-12",
+      "target": {
+        "label": "数据分析（虚构目标）",
+        "precision": "posting",
+        "applicability": "仅针对所给虚构职责，不使用企业AI知识。"
+      },
+      "knowledge": {
+        "id": "synthetic-analyst-value",
+        "version": "fictional-v1"
+      },
+      "evidence": [
+        {
+          "id": "E1",
+          "kind": "personal",
+          "title": "虚构个人材料",
+          "text": "负责经营看板；本人说明主要按业务口径制作，尚未独立分析变化原因或提出经营建议。",
+          "locator": "虚构演练资料"
+        },
+        {
+          "id": "T1",
+          "kind": "target",
+          "title": "虚构目标JD",
+          "text": "虚构目标要求识别经营问题、解释指标变化并提出可检验的建议。",
+          "locator": "虚构演练目标"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "J1",
+          "statement": "已有指标与报表基础，目标新增原因分析和决策支持责任。",
+          "scope": "仅该虚构目标",
+          "finding_kind": "experience_gap",
+          "responsibility_refs": [
+            "D1",
+            "D2"
+          ],
+          "evidence_refs": [
+            "E1",
+            "T1"
+          ],
+          "rationale": "看板让变化可见，解释变化则要区分口径、样本和业务因素，否则建议可能针对错误原因。已有制作经验是起点；本人确认未承担后段任务，因此先争取一项分析与建议责任，比默认再学一个可视化工具更直接。",
+          "alternatives": [
+            "若本人实际责任或目标分工不同，当前解释需要重新审视。"
+          ],
+          "change_conditions": [
+            "新增本人责任、结果记录或不同JD条件时重新判断。"
+          ]
+        }
+      ],
+      "presentation": {
+        "title": "已有指标与报表基础，目标新增原因分析和决策支持责任。",
+        "main_judgment": "J1",
+        "intro": "看板让变化可见，解释变化则要区分口径、样本和业务因素，否则建议可能针对错误原因。已有制作经验是起点；本人确认未承担后段任务，因此先争取一项分析与建议责任，比默认再学一个可视化工具更直接。",
+        "role_intro": "看板让变化可见，解释变化则要区分口径、样本和业务因素，否则建议可能针对错误原因。已有制作经验是起点；本人确认未承担后段任务，因此先争取一项分析与建议责任，比默认再学一个可视化工具更直接。",
+        "personal_intro": "负责经营看板；本人说明主要按业务口径制作，尚未独立分析变化原因或提出经营建议。",
+        "responsibility_refs": [
+          "D1",
+          "D2"
+        ],
+        "comparison": [
+          {
+            "responsibility_ref": "D2",
+            "experience": "负责经营看板；本人说明主要按业务口径制作，尚未独立分析变化原因或提出经营建议。",
+            "difference": "已有指标与报表基础，目标新增原因分析和决策支持责任。",
+            "judgment_ref": "J1"
+          }
+        ],
+        "paths": [
+          {
+            "title": "当前优先方向",
+            "fit": "先承担一次经营问题分析并跟进建议；若近期求职可选择报表责任为主的岗位。",
+            "investment": "按该责任整理已有记录或取得相应工作机会。",
+            "tradeoff": "近期适配与长期目标需要分别考虑。",
+            "choose_when": "符合本人想承担的责任及现实条件。",
+            "judgment_refs": [
+              "J1"
+            ]
+          }
+        ],
+        "choice_note": "先承担一次经营问题分析并跟进建议；若近期求职可选择报表责任为主的岗位。"
+      }
+    }
+  },
+  {
+    "id": "manager-scope",
+    "note": "全部虚构，由同一Agent编写并回放，不是独立验证。",
+    "knowledge": {
+      "id": "synthetic-manager-scope",
+      "version": "fictional-v1",
+      "scope": "工程管理虚构职责，仅演练方法",
+      "maturity": "limited",
+      "limitations": "全部材料虚构；未进行该职业市场研究，不代表真实岗位分布。",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "工程管理虚构JD",
+          "url": "https://example.org/fictional/manager-scope",
+          "captured_at": "2026-10-12",
+          "visibility": "full_description",
+          "locator": "虚构目标全文",
+          "summary": "虚构目标明确要求直接管理团队、招聘和人员发展；项目协调只是职责的一部分。"
+        }
+      ],
+      "responsibilities": [
+        {
+          "id": "D1",
+          "title": "项目协调",
+          "question": "已有工作解决什么问题？",
+          "observed": "项目协调是虚构目标中的相关基础任务。",
+          "mechanism": "基础任务可能为后续工作提供条件，但不能自动代替后续责任。",
+          "evidence_standard": "说明本人决定与实际结果。",
+          "scope": "仅该虚构目标",
+          "source_refs": [
+            "S1"
+          ]
+        },
+        {
+          "id": "D2",
+          "title": "人员与团队管理",
+          "question": "新增责任要求本人决定什么？",
+          "observed": "虚构目标明确要求直接管理团队、招聘和人员发展；项目协调只是职责的一部分。",
+          "mechanism": "协调交付说明能推动多方工作，不自动证明能招聘、反馈和培养团队成员。新增责任来自具体目标分工，应比较工程协作型岗位与真正管理转型的投入；不能靠再交付一个项目声称已经带过团队。",
+          "evidence_standard": "说明一项相应责任的本人决定、依据与结果。",
+          "scope": "仅该虚构目标",
+          "source_refs": [
+            "S1"
+          ]
+        }
+      ]
+    },
+    "case": {
+      "case_id": "fictional-manager-scope",
+      "revision": 1,
+      "kind": "synthetic",
+      "date": "2026-10-12",
+      "target": {
+        "label": "工程管理（虚构目标）",
+        "precision": "posting",
+        "applicability": "仅针对所给虚构职责，不使用企业AI知识。"
+      },
+      "knowledge": {
+        "id": "synthetic-manager-scope",
+        "version": "fictional-v1"
+      },
+      "evidence": [
+        {
+          "id": "E1",
+          "kind": "personal",
+          "title": "虚构个人材料",
+          "text": "主导跨团队项目并按期交付；本人确认未承担直接下属的招聘、绩效反馈和培养。",
+          "locator": "虚构演练资料"
+        },
+        {
+          "id": "T1",
+          "kind": "target",
+          "title": "虚构目标JD",
+          "text": "虚构目标明确要求直接管理团队、招聘和人员发展；项目协调只是职责的一部分。",
+          "locator": "虚构演练目标"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "J1",
+          "statement": "项目协调经验有价值，但目标增加人员管理责任。",
+          "scope": "仅该虚构目标",
+          "finding_kind": "target_mismatch",
+          "responsibility_refs": [
+            "D1",
+            "D2"
+          ],
+          "evidence_refs": [
+            "E1",
+            "T1"
+          ],
+          "rationale": "协调交付说明能推动多方工作，不自动证明能招聘、反馈和培养团队成员。新增责任来自具体目标分工，应比较工程协作型岗位与真正管理转型的投入；不能靠再交付一个项目声称已经带过团队。",
+          "alternatives": [
+            "若本人实际责任或目标分工不同，当前解释需要重新审视。"
+          ],
+          "change_conditions": [
+            "新增本人责任、结果记录或不同JD条件时重新判断。"
+          ]
+        }
+      ],
+      "presentation": {
+        "title": "项目协调经验有价值，但目标增加人员管理责任。",
+        "main_judgment": "J1",
+        "intro": "协调交付说明能推动多方工作，不自动证明能招聘、反馈和培养团队成员。新增责任来自具体目标分工，应比较工程协作型岗位与真正管理转型的投入；不能靠再交付一个项目声称已经带过团队。",
+        "role_intro": "协调交付说明能推动多方工作，不自动证明能招聘、反馈和培养团队成员。新增责任来自具体目标分工，应比较工程协作型岗位与真正管理转型的投入；不能靠再交付一个项目声称已经带过团队。",
+        "personal_intro": "主导跨团队项目并按期交付；本人确认未承担直接下属的招聘、绩效反馈和培养。",
+        "responsibility_refs": [
+          "D1",
+          "D2"
+        ],
+        "comparison": [
+          {
+            "responsibility_ref": "D2",
+            "experience": "主导跨团队项目并按期交付；本人确认未承担直接下属的招聘、绩效反馈和培养。",
+            "difference": "项目协调经验有价值，但目标增加人员管理责任。",
+            "judgment_ref": "J1"
+          }
+        ],
+        "paths": [
+          {
+            "title": "当前优先方向",
+            "fit": "优先比较工程项目协调职责，或主动选择并积累人员管理责任。",
+            "investment": "按该责任整理已有记录或取得相应工作机会。",
+            "tradeoff": "近期适配与长期目标需要分别考虑。",
+            "choose_when": "符合本人想承担的责任及现实条件。",
+            "judgment_refs": [
+              "J1"
+            ]
+          }
+        ],
+        "choice_note": "优先比较工程项目协调职责，或主动选择并积累人员管理责任。"
+      }
+    }
+  }
+]
