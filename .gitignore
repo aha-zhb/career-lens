@@ -1,0 +1,16 @@
+**/.venv/
+**/__pycache__/
+*.py[cod]
+.DS_Store
+private/
+state/
+outputs/private/
+
+# Publication excludes local diagnostics, generated personal reports and development records.
+outputs/
+workfile/
+AGENTS.md
+.env
+.env.*
+*.pem
+*.key
